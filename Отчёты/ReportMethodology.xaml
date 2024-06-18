@@ -1,0 +1,47 @@
+﻿<Window x:Class="WindowRBD1.Отчёты.ReportMethodology"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindowRBD1.Отчёты"
+        mc:Ignorable="d"
+        Title="Relational database v.1.0" Height="949" Width="1920" WindowState="Maximized">
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF02688A" Offset="0.062"/>
+                <GradientStop Color="#FF310946" Offset="0.862"/>
+                <GradientStop Color="#FF00334E" Offset="0.365"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Image HorizontalAlignment="Left" Height="124" Margin="10,10,0,0" VerticalAlignment="Top" Width="126" Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\IconProgram.png"/>
+
+        <Label Content="Наименование методики" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="123,308,0,0" VerticalAlignment="Top" Width="284" Height="50"/>
+        <Label Content="Описание генераторной" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="123,426,0,0" VerticalAlignment="Top" Width="284" Height="50"/>
+        <Label Content="Описание измерительной" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="123,544,0,0" VerticalAlignment="Top" Width="284" Height="50"/>
+        <Label Content="Описание телеметрической" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="852,189,0,0" VerticalAlignment="Top" Width="284" Height="50"/>
+        <Label Content="Продолжительность импульса" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="852,308,0,0" VerticalAlignment="Top" Width="284" Height="50" RenderTransformOrigin="0.446,0.59"/>
+        <Label Content="Продолжительность паузы" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="852,426,0,0" VerticalAlignment="Top" Width="284" Height="50"/>
+        <Label Content="Сила тока" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="852,544,0,0" VerticalAlignment="Top" Width="284" Height="50"/>
+
+        <Label x:Name="cmbNameMethodology" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" Margin="473,308,0,0"  VerticalAlignment="Top" Width="230" Height="50"/>
+        <Label x:Name="txtTelemetry" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" Margin="1163,189,0,0" VerticalAlignment="Top" Width="230" Height="50"/>
+        <Label x:Name="txtImpulse" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" Margin="1163,308,0,0" VerticalAlignment="Top" Width="230" Height="50"/>
+        <Label x:Name="txtPause"  HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" Margin="1163,426,0,0" VerticalAlignment="Top" Width="230" Height="50"/>
+        <Label x:Name="txtCurrent" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" Margin="1163,544,0,0" VerticalAlignment="Top" Width="230" Height="50"/>
+
+        <Label x:Name="txtGenerative"  HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite"  Margin="472,426,0,0"   VerticalAlignment="Top" Width="230" Height="50" />
+        <Label x:Name="txtMeasuring"  HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" Margin="473,544,0,0"   VerticalAlignment="Top" Width="230" Height="50" />
+        <Label Content="Номер методики" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="123,189,0,0" VerticalAlignment="Top" Width="284" Height="50"/>
+        <Label x:Name="cmbNumber" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" Margin="471,189,0,0"  VerticalAlignment="Top" Width="230" Height="50"/>
+
+        <Label  Content="Отчёт о клиентe" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="23" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="570,40,0,0" VerticalAlignment="Top" Height="69" Width="425"/>
+
+        <Button HorizontalAlignment="Left" Margin="250,40,0,0" VerticalAlignment="Top" Height="69" Width="154" Click="Button_Click">
+            <Image  x:Name="res" Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icons-Print.png" Width="154" />
+        </Button>
+        <Image HorizontalAlignment="Left" Height="100" Margin="72,672,0,0" Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\Подпись.PNG" VerticalAlignment="Top" Width="347"/>
+
+    </Grid>
+</Window>

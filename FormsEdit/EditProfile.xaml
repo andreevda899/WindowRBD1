@@ -1,0 +1,113 @@
+﻿<Window x:Class="WindowRBD1.FormsEdit.EditProfile"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WindowRBD1.FormsEdit"
+      mc:Ignorable="d" 
+        Title="Relational database v.1.0"
+        WindowState="Maximized" >
+
+    <Grid Margin="0,10,10,-6" Width="1519" >
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF02688A" Offset="0.062"/>
+                <GradientStop Color="#FF310946" Offset="0.862"/>
+                <GradientStop Color="#FF00334E" Offset="0.365"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Label Content="Наименование профиля" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="126,257,0,0" VerticalAlignment="Top" Width="284" Height="50"/>
+        <Label Content="Координаты начала" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="126,450,0,0" VerticalAlignment="Top" Width="284" Height="50"/>
+        <Label Content="Координаты окончания" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="868,163,0,0" VerticalAlignment="Top" Width="253" Height="50"/>
+        <Label Content="Длина" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="868,261,0,0" VerticalAlignment="Top" Width="253" Height="50" />
+        <Label Content="Дата и время начала работ" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="868,353,0,0" VerticalAlignment="Top" Width="253" Height="50"/>
+        <Label Content="Дата и время окончания работ" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="15" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="868,451,0,0" VerticalAlignment="Top" Width="253" Height="50"/>
+
+        <Button x:Name="btEdit" Content="Изменить" Background="GhostWhite" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" Margin="466,633,0,0" VerticalAlignment="Top" Height="100" Width="232" Click="btEdit_Click"/>
+        <Button x:Name="btClose" Content="Отменить" Background="GhostWhite" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" Margin="836,633,0,0" VerticalAlignment="Top" Height="100" Width="232" Click="btClose_Click_1"/>
+
+        <TextBox x:Name="txtNameProfile" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" Margin="447,257,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209" Height="50" />
+        <TextBox x:Name="txtCoordinatesBeginning"  MaxLength="100" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" Margin="447,450,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="209" Height="50"/>
+        <TextBox x:Name="txtCoordinatesEnd" MaxLength="100" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" Margin="1163,162,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="230" Height="50"/>
+        <TextBox x:Name="txtLength" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" Margin="1163,260,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" Height="50"/>
+        <Label x:Name="lbCoordinatesBeginning"  HorizontalAlignment="Left" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" Margin="466,517,0,0" VerticalAlignment="Top" Height="27" Width="auto"/>
+        <Label x:Name="lbCoordinatesEnd"  HorizontalAlignment="Left" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" Margin="1129,230,0,0" VerticalAlignment="Top" Height="27" Width="auto"/>
+
+        <Label  Content="Редактирование Профиля" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="540,40,0,0" VerticalAlignment="Top" Height="69" Width="425"/>
+
+        <Label x:Name="Time"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="13,33,0,0" VerticalAlignment="Top" Height="60" Width="auto"/>
+        <Label Content="Координаты изломов" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="126,536,0,0" VerticalAlignment="Top" Width="284" Height="50"/>
+        <TextBox x:Name="txtCoordinatesFracture"  MaxLength="100" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" Margin="447,536,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="209" Height="50"/>
+        <Label x:Name="lbCoordinatesFracture"  HorizontalAlignment="Left" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" Margin="461,597,0,0" VerticalAlignment="Top" Height="27" Width="auto"/>
+        <Label Content="Номер пикета" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="126,355,0,0" VerticalAlignment="Top" Width="284" Height="50"/>
+        <ComboBox x:Name="txtNumberPicket" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" Margin="447,355,0,0"  VerticalAlignment="Top" Width="209" Height="50"/>
+        <Label Content="Номер профиля" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="126,162,0,0" VerticalAlignment="Top" Width="284" Height="50"/>
+        <ComboBox x:Name="txtNumber" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" Margin="447,162,0,0"  VerticalAlignment="Top" Width="209" Height="50" SelectionChanged="txtNameProfile_SelectionChanged_1"/>
+
+        <Button  HorizontalAlignment="Left" Background="GhostWhite" x:Name="btPoisk1" Click="btPoisk1_Click" Margin="680,162,0,0" VerticalAlignment="Top" Height="50">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-browse.png" RenderTransformOrigin="0.537,0.679" Height="39"/>
+            </StackPanel>
+        </Button>
+
+        <Button  HorizontalAlignment="Left" Background="GhostWhite" x:Name="btAdd1" Click="btAdd1_Click" Margin="731,162,0,0" VerticalAlignment="Top" Height="50">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-ADD.png" RenderTransformOrigin="0.5,0.5" Height="39"/>
+            </StackPanel>
+        </Button>
+
+        <Button  HorizontalAlignment="Left" Background="GhostWhite" x:Name="btRefresh" Click="btRefresh_Click" Margin="790,162,0,0" VerticalAlignment="Top" Height="50">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-refresh.png" RenderTransformOrigin="0.5,0.5" Height="39"/>
+
+            </StackPanel>
+        </Button>
+
+        <Button  HorizontalAlignment="Left" Background="GhostWhite" x:Name="btPoisk2" Click="btPoisk2_Click" Margin="680,355,0,0" VerticalAlignment="Top" Height="50">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-browse.png" RenderTransformOrigin="0.537,0.679" Height="39"/>
+            </StackPanel>
+        </Button>
+
+        <Button  HorizontalAlignment="Left" Background="GhostWhite" x:Name="btAdd2" Click="btAdd2_Click" Margin="731,355,0,0" VerticalAlignment="Top" Height="50">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-ADD.png" RenderTransformOrigin="0.5,0.5" Height="39"/>
+            </StackPanel>
+        </Button>
+
+        <DatePicker x:Name="dateBen" FontSize="18" HorizontalContentAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Background="GhostWhite" Margin="1163,355,0,0" VerticalContentAlignment="Center" VerticalAlignment="Top" Height="50" Width="230">
+            <DatePicker.Resources>
+                <Style TargetType="DatePickerTextBox">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate>
+                                <TextBox Text="{Binding Path=SelectedDate, RelativeSource={RelativeSource AncestorType=DatePicker}, StringFormat={}{0:dd/MM/yyy hh:mm:ss}}"/>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </DatePicker.Resources>
+        </DatePicker>
+
+        <DatePicker x:Name="dateEnd" FontSize="18" HorizontalContentAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Background="GhostWhite" Margin="1163,450,0,0" VerticalContentAlignment="Center" VerticalAlignment="Top" Height="50" Width="230">
+            <DatePicker.Resources>
+                <Style TargetType="DatePickerTextBox">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate>
+                                <TextBox Text="{Binding Path=SelectedDate, RelativeSource={RelativeSource AncestorType=DatePicker}, StringFormat={}{0:dd/MM/yyy hh:mm:ss}}"/>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </DatePicker.Resources>
+        </DatePicker>
+        <Button  HorizontalAlignment="Left" Background="GhostWhite" x:Name="btRefresh1" Click="btRefresh1_Click" Margin="790,355,0,0" VerticalAlignment="Top" Height="50">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-refresh.png" RenderTransformOrigin="0.5,0.5" Height="39"/>
+
+            </StackPanel>
+        </Button>
+    </Grid>
+</Window>

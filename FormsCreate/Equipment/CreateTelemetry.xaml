@@ -1,0 +1,39 @@
+﻿<Window x:Class="WindowRBD1.FormsCreate.Equipment.CreateTelemetry"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WindowRBD1.FormsCreate.Equipment"
+      mc:Ignorable="d" 
+        Title="Relational database v.1.0"
+            Height="891" Width="1920" WindowState="Maximized">
+
+    <Grid Margin="0,10,10,-6" >
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF02688A" Offset="0.062"/>
+                <GradientStop Color="#FF310946" Offset="0.862"/>
+                <GradientStop Color="#FF00334E" Offset="0.365"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Label Content="Наименование" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="434,137,0,0" VerticalAlignment="Top" Width="316" Height="50"/>
+        <TextBox x:Name="txtName" MaxLength="100" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" Margin="868,137,0,0"  VerticalAlignment="Top" Width="298" Height="50"/>
+        <Label Content="Инвентарный номер" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="434,242,0,0" VerticalAlignment="Top" Width="316" Height="50"/>
+        <Label Content="Дата приобретения" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="434,346,0,0" VerticalAlignment="Top" Width="316" Height="50"/>
+        <Label Content="Дата поверки" Background="GhostWhite" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" HorizontalAlignment="Left" Margin="434,452,0,0" VerticalAlignment="Top" Width="316" Height="50"/>
+        <TextBox x:Name="txtCharacteristic" MaxLength="100" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" Margin="868,558,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="298" Height="50"/>
+
+        <Button x:Name="btCreate" Content="Создать" Background="GhostWhite" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" Margin="466,650,0,0" VerticalAlignment="Top" Height="100" Width="232" Click="btCreate_Click"/>
+        <Button x:Name="btClose" Content="Отменить" Background="GhostWhite" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" Margin="868,650,0,0" VerticalAlignment="Top" Height="100" Width="232" Click="btClose_Click"/>
+        <DatePicker x:Name="dateVerification" HorizontalContentAlignment="Center" FontSize="18" FontWeight="Bold" HorizontalAlignment="Left" Background="GhostWhite" Margin="868,346,0,0" VerticalContentAlignment="Center" VerticalAlignment="Top" Height="50" Width="298"/>
+        <Label Content="Характеристики" Background="GhostWhite" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" HorizontalAlignment="Left" Margin="434,558,0,0" VerticalAlignment="Top" Width="316" Height="50"/>
+        <TextBox x:Name="txtInventory" MaxLength="100" FontSize="18" FontWeight="Bold" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="GhostWhite" Margin="868,242,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="298" Height="50"/>
+        <DatePicker x:Name="datePurchases" FontSize="18" HorizontalContentAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Background="GhostWhite" Margin="868,452,0,0" VerticalContentAlignment="Center" VerticalAlignment="Top" Height="50" Width="298"/>
+       
+        <Label  Content="Добавления Телеметрического оборудования" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="484,14,0,0" VerticalAlignment="Top" Height="69" Width="616"/>
+
+        <Label x:Name="Time"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="13,33,0,0" VerticalAlignment="Top" Height="60" Width="auto"/>
+
+    </Grid>
+</Window>

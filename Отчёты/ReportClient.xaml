@@ -1,0 +1,55 @@
+﻿<Window x:Class="WindowRBD1.Отчёты.ReportClient"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindowRBD1.Отчёты"
+        mc:Ignorable="d"
+        Title="Relational database v.1.0"  Height="949" Width="1920" WindowState="Maximized">
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF02688A" Offset="0.062"/>
+                <GradientStop Color="#FF310946" Offset="0.862"/>
+                <GradientStop Color="#FF00334E" Offset="0.365"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Image HorizontalAlignment="Left" Height="124" Margin="10,10,0,0" VerticalAlignment="Top" Width="126" Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\IconProgram.png"/>
+
+        <Label Content="Название компаний" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="233,243,0,0" VerticalAlignment="Top" Width="220" Height="50"/>
+        <Label Content="Представитель" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Margin="811,340,0,0" Background="GhostWhite" VerticalAlignment="Top" Width="220" Height="50"/>
+        <Label Content="Юридический адрес" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="233,340,0,0" VerticalAlignment="Top" Width="220" Height="50"/>
+        <Label Content="Телефон представителя" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Margin="811,442,0,0" Background="GhostWhite" VerticalAlignment="Top" Width="220" Height="50"/>
+        <Label Content="Адрес электронной почты" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Margin="811,536,0,0" Background="GhostWhite" VerticalAlignment="Top" Width="220" Height="50"/>
+        <Label Content="Фактический адрес" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="233,440,0,0" VerticalAlignment="Top" Width="220" Height="50"/>
+        <Label Content="Сайт" HorizontalContentAlignment="Center" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="813,619,0,0" Background="GhostWhite" VerticalAlignment="Top" Width="220" Height="50"/>
+        <Label Content="ИНН" Background="GhostWhite" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Margin="233,536,0,0" VerticalAlignment="Top" Width="220" Height="50"/>
+        <Label Content="КПК" Background="GhostWhite" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Margin="233,619,0,0" VerticalAlignment="Top" Width="220" Height="50"/>
+        <Label Content="Расчетный счёт" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="811,242,0,0" VerticalAlignment="Top" Width="220" Height="50"/>
+        <Label Content="Корреспондентский счёт" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="811,144,0,0" VerticalAlignment="Top" Width="220" Height="50"/>
+
+        <Label x:Name="txtNameCompany"  HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" Margin="516,241,0,0"  VerticalAlignment="Top" Width="221" Height="50"/>
+        <Label x:Name="txtActualAddress" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" Margin="516,440,0,0" VerticalAlignment="Top" Width="221" Height="50"/>
+        <Label x:Name="txtCalculated" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" Margin="1081,144,0,0" VerticalAlignment="Top" Width="222" Height="50"/>
+        <Label x:Name="txtCorrespondent" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  FontSize="14" FontWeight="Bold" Background="GhostWhite" Margin="1081,242,0,0" VerticalAlignment="Top" Width="222" Height="50"/>
+        <Label x:Name="txtPhone" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" Margin="1081,440,0,0" VerticalAlignment="Top" Width="222" Height="50"/>
+        <Label x:Name="txtPda" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" Margin="516,619,0,0" VerticalAlignment="Top" Width="221" Height="50"/>
+        <Label x:Name="txtINN" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" Margin="516,536,0,0" VerticalAlignment="Top" Width="221" Height="50"/>
+        <Label x:Name="txtEmail" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" Margin="1081,536,0,0" VerticalAlignment="Top" Width="222" Height="50"/>
+        <Label x:Name="txtSite" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold"  Background="GhostWhite" Margin="1083,619,0,0" VerticalAlignment="Top" Width="222" Height="50"/>
+        <Label x:Name="txtAgent" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" Margin="1081,340,0,0" VerticalAlignment="Top" Width="222" Height="50"/>
+        <Label x:Name="txtLegalAddress" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" Margin="516,339,0,0" VerticalAlignment="Top" Width="221" Height="50"/>
+
+        <Label x:Name="txtNumber" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" Margin="515,143,0,0"  VerticalAlignment="Top" Width="222" Height="50"/>
+        <Label Content="Номер Заказчика" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="233,143,0,0" VerticalAlignment="Top" Width="220" Height="50"/>
+
+        <Label  Content="Отчёт о клиентe" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="23" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="570,40,0,0" VerticalAlignment="Top" Height="69" Width="425"/>
+
+        <Button HorizontalAlignment="Left" Margin="250,40,0,0" VerticalAlignment="Top" Height="69" Width="154" Click="Button_Click">
+            <Image  x:Name="res" Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icons-Print.png" Width="154" />
+        </Button>
+        <Image HorizontalAlignment="Left" Height="100" Margin="72,672,0,0" Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\Подпись.PNG" VerticalAlignment="Top" Width="347"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,58 @@
+﻿<Window x:Class="WindowRBD1.FormsEdit.EditContract"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WindowRBD1.FormsEdit"
+      mc:Ignorable="d"
+        Title="Relational database v.1.0"
+      Height="891" Width="1920" WindowState="Maximized">
+
+    <Grid Margin="0,10,10,-6" >
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF02688A" Offset="0.062"/>
+                <GradientStop Color="#FF310946" Offset="0.862"/>
+                <GradientStop Color="#FF00334E" Offset="0.365"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Label Content="Наименование договора" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="318,224,0,0" VerticalAlignment="Top" Width="284" Height="50"/>
+        <Label Content="Начала" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="318,306,0,0" VerticalAlignment="Top" Width="284" Height="50"/>
+        <Label Content="Окончания" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="318,387,0,0" VerticalAlignment="Top" Width="284" Height="50"/>
+        <Label Content="Стоимость " Background="GhostWhite" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" HorizontalAlignment="Left" Margin="318,470,0,0" VerticalAlignment="Top" Width="284" Height="50"/>
+
+        <TextBox x:Name="txtNameContract" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" Margin="748,224,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="298" Height="50" />
+        <TextBox x:Name="txtCost" MaxLength="10" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" Margin="748,470,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="298" Height="50"/>
+
+        <Label  Content="Редактирования Контракта" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="472,35,0,0" VerticalAlignment="Top" Height="69" Width="425"/>
+
+        <Button x:Name="btEdit" Content="Изменить" Background="GhostWhite" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" Margin="342,584,0,0" VerticalAlignment="Top" Height="93" Width="260" Click="btEdit_Click"/>
+        <Button x:Name="btClose" Content="Отменить" Background="GhostWhite" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" Margin="748,584,0,0" VerticalAlignment="Top" Height="93" Width="261" Click="btClose_Click"/>
+
+        <Label x:Name="Time"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="13,33,0,0" VerticalAlignment="Top" Height="60" Width="auto"/>
+        <Label Content="Номер договора" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="318,142,0,0" VerticalAlignment="Top" Width="284" Height="50"/>
+        <ComboBox x:Name="Number" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" Margin="748,142,0,0"  VerticalAlignment="Top" Width="298" Height="50" SelectionChanged="txtNameContract_SelectionChanged"/>
+
+        <DatePicker x:Name="txtBeginnings" FontSize="18" HorizontalContentAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Background="GhostWhite" Margin="748,306,0,0" VerticalContentAlignment="Center" VerticalAlignment="Top" Height="50" Width="298"/>
+
+        <DatePicker x:Name="txtEndings" FontSize="18" HorizontalContentAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Background="GhostWhite" Margin="748,387,0,0" VerticalContentAlignment="Center" VerticalAlignment="Top" Height="50" Width="298"/>
+
+        <Button  HorizontalAlignment="Left" Height="50" Background="GhostWhite" Margin="1086,142,0,0" Click="btPoisk3_Click" VerticalAlignment="Top">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-browse.png" RenderTransformOrigin="0.537,0.679" Height="39"/>
+            </StackPanel>
+        </Button>
+        <Button  HorizontalAlignment="Left" Height="50" Background="GhostWhite" Click="btAdd3_Click" Margin="1150,142,0,0" VerticalAlignment="Top">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-Add.png" RenderTransformOrigin="0.537,0.679" Height="39"/>
+            </StackPanel>
+        </Button>
+        <Button  HorizontalAlignment="Left" Height="50" Background="GhostWhite" Click="btRefresh_Click" Margin="1210,142,0,0" VerticalAlignment="Top">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-refresh.png" RenderTransformOrigin="0.537,0.679" Height="39"/>
+            </StackPanel>
+        </Button>
+
+    </Grid>
+</Window>

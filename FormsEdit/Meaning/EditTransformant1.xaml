@@ -1,0 +1,64 @@
+﻿<Window x:Class="WindowRBD1.FormsEdit.Meaning.EditTransformant1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindowRBD1.FormsCreate.Meaning"
+        mc:Ignorable="d" Title="Relational database v.1.0"
+         Height="891" Width="1920" WindowState="Maximized">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF02688A" Offset="0.062"/>
+                <GradientStop Color="#FF310946" Offset="0.862"/>
+                <GradientStop Color="#FF00334E" Offset="0.365"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label Content="Индекс Пикета" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="442,282,0,0" VerticalAlignment="Top" Width="316" Height="50"/>
+        <Label Content="Номер Пикета" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="442,386,0,0" VerticalAlignment="Top" Width="316" Height="50"/>
+        <Label Content="Значения трансформанты (ρτ)" Background="GhostWhite" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" HorizontalAlignment="Left" Margin="442,492,0,0" VerticalAlignment="Top" Width="316" Height="50"/>
+        <Button x:Name="btEdit" Content="Изменить" Background="GhostWhite" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" Margin="466,584,0,0" VerticalAlignment="Top" Height="100" Width="232" Click="btEdit_Click"/>
+        <Button x:Name="btClose" Content="Отменить" Background="GhostWhite" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" Margin="868,584,0,0" VerticalAlignment="Top" Height="100" Width="232" Click="btClose_Click"/>
+        <TextBox x:Name="PicketIndex" MaxLength="50" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" Margin="876,282,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="298" Height="50"/>
+        <ComboBox x:Name="txtNumberPicket" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" Margin="876,386,0,0" VerticalAlignment="Top" Width="298" Height="50"/>
+        <TextBox x:Name="Meaning" MaxLength="50" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" Margin="876,492,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="298" Height="50"/>
+
+        <Label  Content="Редактирования Трансформанты 1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="592,56,0,0" VerticalAlignment="Top" Height="69" Width="425"/>
+
+        <Label x:Name="Time"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="13,33,0,0" VerticalAlignment="Top" Height="60" Width="auto"/>
+
+        <Button  HorizontalAlignment="Left" Background="GhostWhite" x:Name="btPoisk1" Click="btPoisk1_Click"  Margin="1188,385,0,0" VerticalAlignment="Top" Height="50">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-browse.png" RenderTransformOrigin="0.537,0.679" Height="39"/>
+            </StackPanel>
+        </Button>
+        <Button  HorizontalAlignment="Left" Background="GhostWhite" x:Name="btAdd1" Click="btAdd1_Click"  Margin="1256,385,0,0" VerticalAlignment="Top" Height="50">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-ADD.png" RenderTransformOrigin="0.5,0.5" Height="39"/>
+            </StackPanel>
+        </Button>
+        <DataGrid x:Name="dataGridView1" HorizontalAlignment="Left" Height="334" Margin="13,184,0,0" FontSize="18" FontWeight="Bold" VerticalAlignment="Top" Width="404" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <Label Content="Номер Трансформанты измерения 1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="442,190,0,0" VerticalAlignment="Top" Width="316" Height="50"/>
+        <ComboBox x:Name="NumberTrans1" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" Margin="876,190,0,0" VerticalAlignment="Top" Width="298" Height="50" SelectionChanged="NumberTrans1_SelectionChanged"/>
+        <Button  HorizontalAlignment="Left" Background="GhostWhite" x:Name="btPoisk2" Click="btPoisk2_Click"  Margin="1188,190,0,0" VerticalAlignment="Top" Height="50">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-browse.png" RenderTransformOrigin="0.537,0.679" Height="39"/>
+            </StackPanel>
+        </Button>
+        <Button  HorizontalAlignment="Left" Background="GhostWhite" x:Name="btAdd2" Click="btAdd2_Click"  Margin="1256,190,0,0" VerticalAlignment="Top" Height="50">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-ADD.png" RenderTransformOrigin="0.5,0.5" Height="39"/>
+            </StackPanel>
+        </Button>
+        <Button  HorizontalAlignment="Left" Background="GhostWhite" x:Name="btRefresh" Click="btRefresh_Click"  Margin="1320,190,0,0" VerticalAlignment="Top" Height="50">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-refresh.png" RenderTransformOrigin="0.5,0.5" Height="39"/>
+            </StackPanel>
+        </Button>
+        <Button  HorizontalAlignment="Left" Background="GhostWhite"  Click="btRefresh1_Click"  Margin="1320,385,0,0" VerticalAlignment="Top" Height="50">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-refresh.png" RenderTransformOrigin="0.5,0.5" Height="39"/>
+            </StackPanel>
+        </Button>
+    </Grid>
+</Window>

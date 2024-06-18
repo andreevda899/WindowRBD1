@@ -1,0 +1,39 @@
+﻿<Window x:Class="WindowRBD1.FormsCreate.Meaning.CreateList"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WindowRBD1.FormsCreate.Meaning"
+      mc:Ignorable="d" 
+      Height="450" Width="600"
+      Title="Relational database v.1.0">
+
+    <Grid Margin="0,10,-19,-6">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF02688A" Offset="0.062"/>
+                <GradientStop Color="#FF310946" Offset="0.862"/>
+                <GradientStop Color="#FF00334E" Offset="0.365"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Button Content="Назад" HorizontalContentAlignment="Center" FontSize="30" FontWeight="Bold"  VerticalContentAlignment="Center" HorizontalAlignment="Left" Background="GhostWhite" Margin="453,328,0,0" VerticalAlignment="Top" Width="140" Height="74" Click="btClose_Click"/>
+        <Button Content="Создать" HorizontalContentAlignment="Center" FontSize="30" FontWeight="Bold"  VerticalContentAlignment="Center" HorizontalAlignment="Left" Background="GhostWhite" Margin="261,328,0,0" VerticalAlignment="Top" Width="140" Height="74" Click="btCreate_Click"/>
+
+        <Label Content="x1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="32,85,0,0" VerticalAlignment="Top" Width="98" Height="50"/>
+        <Label Content="x2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="32,158,0,0" VerticalAlignment="Top" Width="98" Height="50"/>
+        <Label Content="y3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" HorizontalAlignment="Left" Margin="333,243,0,0" Background="GhostWhite" VerticalAlignment="Top" Width="98" Height="50"/>
+        <Label Content="y1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" Margin="333,85,0,0" Background="GhostWhite" VerticalAlignment="Top" Width="98" Height="50"/>
+        <Label Content="y2" Background="GhostWhite" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Margin="333,158,0,0" VerticalAlignment="Top" Width="98" Height="50"/>
+        <Label Content="x3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="32,243,0,0" VerticalAlignment="Top" Width="98" Height="50"/>
+
+        <TextBox x:Name="txtX1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="18" FontWeight="Bold" Background="GhostWhite" Margin="157,85,0,0"  VerticalAlignment="Top" Width="110" Height="50"/>
+        <TextBox x:Name="txtX2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="18" FontWeight="Bold" Background="GhostWhite" Margin="157,158,0,0"  VerticalAlignment="Top" Width="110" Height="50"/>
+        <TextBox x:Name="txtX3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="18" FontWeight="Bold" Background="GhostWhite" Margin="157,243,0,0"  VerticalAlignment="Top" Width="110" Height="50"/>
+        <TextBox x:Name="txtY1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="18" FontWeight="Bold" Background="GhostWhite" Margin="468,85,0,0"  VerticalAlignment="Top" Width="110" Height="50"/>
+        <TextBox x:Name="txtY2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="18" FontWeight="Bold" Background="GhostWhite" Margin="468,158,0,0"  VerticalAlignment="Top" Width="110" Height="50"/>
+        <TextBox x:Name="txtY3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontSize="18" FontWeight="Bold" Background="GhostWhite" Margin="468,243,0,0"  VerticalAlignment="Top" Width="110" Height="50"/>
+        <Label Content="Добавления списка координат" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="350" Height="50"/>
+
+    </Grid>
+</Window>

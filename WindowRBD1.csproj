@@ -1,0 +1,1401 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Costura.Fody.5.7.0\build\Costura.Fody.props" Condition="Exists('packages\Costura.Fody.5.7.0\build\Costura.Fody.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{600F22F1-731C-453D-AE4C-3279C77D0AAC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowRBD1</RootNamespace>
+    <AssemblyName>Relational database v.1.0</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>WindowRBD1.App</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>IconProgram.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>packages\Castle.Core.5.1.1\lib\net462\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.102.2.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <HintPath>packages\ClosedXML.0.102.2\lib\netstandard2.0\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="Costura, Version=5.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Costura.Fody.5.7.0\lib\netstandard1.0\Costura.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.16.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>packages\DocumentFormat.OpenXml.2.16.0\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>packages\ExcelDataReader.3.6.0\lib\net45\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>packages\ExcelDataReader.DataSet.3.6.0\lib\net35\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.1.0.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>packages\ExcelNumberFormat.1.1.0\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Documents.Spread, Version=1.4.0.0, Culture=neutral, PublicKeyToken=c57ae7fc6891b71d, processorArchitecture=MSIL">
+      <HintPath>packages\Spread.Services.1.4.0\lib\net45\GrapeCity.Documents.Spread.dll</HintPath>
+    </Reference>
+    <Reference Include="Irony, Version=1.0.11.0, Culture=neutral, PublicKeyToken=ca48ace7223ead47, processorArchitecture=MSIL">
+      <HintPath>packages\Irony.NetCore.1.0.11\lib\net461\Irony.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Magnum, Version=2.1.3.0, Culture=neutral, PublicKeyToken=b800c4cfcdeea87b, processorArchitecture=MSIL">
+      <HintPath>packages\Magnum.2.1.3\lib\NET40\Magnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.ActiveDirectory.GraphClient, Version=2.1.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Azure.ActiveDirectory.GraphClient.2.1.1\lib\portable-net4+sl5+win+wpa+wp8\Microsoft.Azure.ActiveDirectory.GraphClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.1.1.1\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Data.Edm.5.6.4\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Data.OData.5.6.4\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Data.Services.Client.5.6.4\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportViewer.WinForms.10.0.40219.1\lib\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Win32.Primitives.4.3.0\lib\net46\Microsoft.Win32.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Moq, Version=4.20.70.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <HintPath>packages\Moq.4.20.70\lib\net462\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.6.0.5\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ReachFramework" />
+    <Reference Include="SixLabors.Fonts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d998eea7b14cab13, processorArchitecture=MSIL">
+      <HintPath>packages\SixLabors.Fonts.1.0.0\lib\netstandard2.0\SixLabors.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.XLS, Version=14.4.7.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>packages\Spire.XLS.14.4.7\lib\net40\Spire.XLS.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Data.WPF, Version=25.1462.41.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>packages\Syncfusion.Data.WPF.25.1.41\lib\net462\Syncfusion.Data.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing, Version=25.1462.41.0, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>packages\Syncfusion.Licensing.25.1.41\lib\net462\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfGrid.WPF, Version=25.1462.41.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>packages\Syncfusion.SfGrid.WPF.25.1.41\lib\net462\Syncfusion.SfGrid.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.WPF, Version=25.1462.41.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>packages\Syncfusion.Shared.WPF.25.1.41\lib\net462\Syncfusion.Shared.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.AppContext, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.AppContext.4.3.0\lib\net463\System.AppContext.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Configuration.ConfigurationManager.8.0.0\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Console, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Console.4.3.0\lib\net46\System.Console.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.DiagnosticSource.4.3.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Tracing, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.Tracing.4.3.0\lib\net462\System.Diagnostics.Tracing.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Common, Version=4.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Drawing.Common.4.7.0\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Globalization.Calendars, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Globalization.Calendars.4.3.0\lib\net46\System.Globalization.Calendars.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Compression.4.3.0\lib\net46\System.IO.Compression.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.IO.Compression.ZipFile, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Compression.ZipFile.4.3.0\lib\net46\System.IO.Compression.ZipFile.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.FileSystem.4.3.0\lib\net46\System.IO.FileSystem.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Packaging.6.0.0\lib\net461\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Linq.4.3.0\lib\net463\System.Linq.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Linq.Expressions, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Linq.Expressions.4.3.0\lib\net463\System.Linq.Expressions.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Sockets, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Net.Sockets.4.3.0\lib\net46\System.Net.Sockets.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Reflection, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Reflection.4.3.0\lib\net462\System.Reflection.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.7.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Extensions, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.Extensions.4.3.0\lib\net462\System.Runtime.Extensions.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.InteropServices.4.3.0\lib\net463\System.Runtime.InteropServices.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Spatial, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\System.Spatial.5.6.4\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.RegularExpressions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.RegularExpressions.4.3.1\lib\net463\System.Text.RegularExpressions.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.ReaderWriter, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Xml.ReaderWriter.4.3.0\lib\net46\System.Xml.ReaderWriter.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="Xceed.Wpf.AvalonDock, Version=4.6.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>packages\Extended.Wpf.Toolkit.4.6.0\lib\net40\Xceed.Wpf.AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero, Version=4.6.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>packages\Extended.Wpf.Toolkit.4.6.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro, Version=4.6.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>packages\Extended.Wpf.Toolkit.4.6.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010, Version=4.6.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>packages\Extended.Wpf.Toolkit.4.6.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>packages\Extended.Wpf.Toolkit.4.6.0\lib\net40\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="XLParser, Version=1.5.2.0, Culture=neutral, PublicKeyToken=63397e1e46bb91b4, processorArchitecture=MSIL">
+      <HintPath>packages\XLParser.1.5.2\lib\net461\XLParser.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="FormsCreate\CreatePersonal.xaml.cs">
+      <DependentUpon>CreatePersonal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCreate\Meaning\CreatefinalResult.xaml.cs">
+      <DependentUpon>CreatefinalResult.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCreate\Meaning\CreateList.xaml.cs">
+      <DependentUpon>CreateList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCreate\Meaning\intermediateResult\CreateIntermediateResult3.xaml.cs">
+      <DependentUpon>CreateIntermediateResult3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCreate\Meaning\intermediateResult\CreateIntermediateResult2.xaml.cs">
+      <DependentUpon>CreateIntermediateResult2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCreate\Meaning\intermediateResult\CreateIntermediateResult1.xaml.cs">
+      <DependentUpon>CreateIntermediateResult1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCreate\Meaning\intermediateResult\CreateIntermediateResult.xaml.cs">
+      <DependentUpon>CreateIntermediateResult.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCreate\Meaning\CreateTransformant3.xaml.cs">
+      <DependentUpon>CreateTransformant3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCreate\Meaning\CreateTransformant2.xaml.cs">
+      <DependentUpon>CreateTransformant2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCreate\Meaning\CreateTransformant1.xaml.cs">
+      <DependentUpon>CreateTransformant1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEdit\EditPersonal.xaml.cs">
+      <DependentUpon>EditPersonal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEdit\Meaning\EditList.xaml.cs">
+      <DependentUpon>EditList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEdit\Meaning\EditfinalResult.xaml.cs">
+      <DependentUpon>EditfinalResult.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEdit\Meaning\EditTransformant3.xaml.cs">
+      <DependentUpon>EditTransformant3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEdit\Meaning\EditTransformant2.xaml.cs">
+      <DependentUpon>EditTransformant2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEdit\Meaning\EditTransformant1.xaml.cs">
+      <DependentUpon>EditTransformant1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEdit\Meaning\intermediateResult\EditIntermediateResult3.xaml.cs">
+      <DependentUpon>EditIntermediateResult3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEdit\Meaning\intermediateResult\EditIntermediateResult2.xaml.cs">
+      <DependentUpon>EditIntermediateResult2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEdit\Meaning\intermediateResult\EditIntermediateResult1.xaml.cs">
+      <DependentUpon>EditIntermediateResult1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEdit\Meaning\intermediateResult\EditIntermediateResult.xaml.cs">
+      <DependentUpon>EditIntermediateResult.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMainOperator\Meaning1.xaml.cs">
+      <DependentUpon>Meaning1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMain\Meaning.xaml.cs">
+      <DependentUpon>Meaning.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMain\Personal.xaml.cs">
+      <DependentUpon>Personal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ForgotPassword.xaml.cs">
+      <DependentUpon>ForgotPassword.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormLoading.xaml.cs">
+      <DependentUpon>FormLoading.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormLoading1.xaml.cs">
+      <DependentUpon>FormLoading1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormReg.xaml.cs">
+      <DependentUpon>FormReg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainWindowOperator.xaml.cs">
+      <DependentUpon>MainWindowOperator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NumberADDGen.xaml.cs">
+      <DependentUpon>NumberADDGen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NumberADDMeauring.xaml.cs">
+      <DependentUpon>NumberADDMeauring.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NumberSupervisor.xaml.cs">
+      <DependentUpon>NumberSupervisor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NumberList.xaml.cs">
+      <DependentUpon>NumberList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NumberContract.xaml.cs">
+      <DependentUpon>NumberContract.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NumberProekt.xaml.cs">
+      <DependentUpon>NumberProekt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NumberClient.xaml.cs">
+      <DependentUpon>NumberClient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NumberArea.xaml.cs">
+      <DependentUpon>NumberArea.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NumberMethodology.xaml.cs">
+      <DependentUpon>NumberMethodology.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NumberProfile.xaml.cs">
+      <DependentUpon>NumberProfile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NumberPicket.xaml.cs">
+      <DependentUpon>NumberPicket.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NumberEq.xaml.cs">
+      <DependentUpon>NumberEq.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NumberGenerative.xaml.cs">
+      <DependentUpon>NumberGenerative.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NumberMeasuring.xaml.cs">
+      <DependentUpon>NumberMeasuring.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NumberMet.xaml.cs">
+      <DependentUpon>NumberMet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NumberOrder.xaml.cs">
+      <DependentUpon>NumberOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Отчёты\Equipment\ReportTelemetry.xaml.cs">
+      <DependentUpon>ReportTelemetry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Отчёты\Equipment\ReportMeasuring.xaml.cs">
+      <DependentUpon>ReportMeasuring.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Отчёты\Equipment\ReportGenerative.xaml.cs">
+      <DependentUpon>ReportGenerative.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Отчёты\Meaning\intermediateResult\ReportIntermediateResult2.xaml.cs">
+      <DependentUpon>ReportIntermediateResult2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Отчёты\Meaning\intermediateResult\ReportIntermediateResult3.xaml.cs">
+      <DependentUpon>ReportIntermediateResult3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Отчёты\Meaning\intermediateResult\ReportIntermediateResult1.xaml.cs">
+      <DependentUpon>ReportIntermediateResult1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Отчёты\Meaning\intermediateResult\ReportIntermediateResult.xaml.cs">
+      <DependentUpon>ReportIntermediateResult.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Отчёты\Meaning\ReportTransformant2.xaml.cs">
+      <DependentUpon>ReportTransformant2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Отчёты\Meaning\ReportTransformant3.xaml.cs">
+      <DependentUpon>ReportTransformant3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Отчёты\Meaning\ReportTransformant1.xaml.cs">
+      <DependentUpon>ReportTransformant1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Отчёты\Meaning\ReportfinalResult.xaml.cs">
+      <DependentUpon>ReportfinalResult.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Отчёты\ReportArea.xaml.cs">
+      <DependentUpon>ReportArea.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Отчёты\ReportPersonal.xaml.cs">
+      <DependentUpon>ReportPersonal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Отчёты\ReportMethodology.xaml.cs">
+      <DependentUpon>ReportMethodology.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Отчёты\ReportOrder.xaml.cs">
+      <DependentUpon>ReportOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Отчёты\ReportPicket.xaml.cs">
+      <DependentUpon>ReportPicket.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Отчёты\ReportProekt.xaml.cs">
+      <DependentUpon>ReportProekt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Отчёты\ReportProfile.xaml.cs">
+      <DependentUpon>ReportProfile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Отчёты\ReportEquipment.xaml.cs">
+      <DependentUpon>ReportEquipment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Отчёты\ReportContract.xaml.cs">
+      <DependentUpon>ReportContract.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Отчёты\ReportClient.xaml.cs">
+      <DependentUpon>ReportClient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Отчёты\Works\ReportDriver.xaml.cs">
+      <DependentUpon>ReportDriver.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Отчёты\Works\ReportITR.xaml.cs">
+      <DependentUpon>ReportITR.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Отчёты\Works\ReportSupervisor.xaml.cs">
+      <DependentUpon>ReportSupervisor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Отчёты\Works\ReportWorker.xaml.cs">
+      <DependentUpon>ReportWorker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Отчёты\Works\ReportChief.xaml.cs">
+      <DependentUpon>ReportChief.xaml</DependentUpon>
+    </Compile>
+    <Page Include="FormsCreate\CreatePersonal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsCreate\Meaning\CreatefinalResult.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsCreate\Meaning\CreateList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormsCreate\Meaning\intermediateResult\CreateIntermediateResult3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsCreate\Meaning\intermediateResult\CreateIntermediateResult2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsCreate\Meaning\intermediateResult\CreateIntermediateResult1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsCreate\Meaning\intermediateResult\CreateIntermediateResult.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsCreate\Meaning\CreateTransformant3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsCreate\Meaning\CreateTransformant2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsCreate\Meaning\CreateTransformant1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormsEdit\EditArea.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsEdit\EditClient.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsEdit\EditContract.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsEdit\EditEquipment.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsEdit\EditPersonal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsEdit\EditMethodology.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsEdit\EditOrder.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsEdit\EditPicket.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsEdit\EditProekt.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsEdit\EditProfile.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsEdit\Equipment\EditGenerative.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsEdit\Equipment\EditMeasuring.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsEdit\Equipment\EditTelemetry.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsEdit\Meaning\EditList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsEdit\Meaning\EditfinalResult.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsEdit\Meaning\EditTransformant3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsEdit\Meaning\EditTransformant2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsEdit\Meaning\EditTransformant1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsEdit\Meaning\intermediateResult\EditIntermediateResult3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsEdit\Meaning\intermediateResult\EditIntermediateResult2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsEdit\Meaning\intermediateResult\EditIntermediateResult1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsEdit\Meaning\intermediateResult\EditIntermediateResult.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsEdit\Works\EditChief.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsEdit\Works\EditDriver.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsEdit\Works\EditITR.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsEdit\Works\EditSupervisor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsEdit\Works\EditWorker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsCreate\CreatePicket.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormsCreate\CreateArea.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormsCreate\CreateClient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormsCreate\CreateContract.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormsCreate\CreateEquipment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormsCreate\CreateMethodology.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormsCreate\CreateOrder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormsCreate\CreateProekt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormsCreate\CreateProfile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormsCreate\Equipment\CreateGenerative.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormsCreate\Equipment\CreateMeasuring.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormsCreate\Equipment\CreateTelemetry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormsCreate\Works\CreateWorker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsCreate\Works\CreateSupervisor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsCreate\Works\CreateITR.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsCreate\Works\CreateDriver.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsCreate\Works\CreateChief.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormsMainOperator\Area1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsMainOperator\Contract1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsMainOperator\Cursomer1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsMainOperator\Generative1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsMainOperator\Meaning1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsMainOperator\Measuring1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsMainOperator\Picket1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsMainOperator\Profile1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsMainOperator\Project1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsMainOperator\Telemetry1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsMain\Meaning.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsMain\Equipment.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsMain\Personal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsMain\Project.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsMain\Contract.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsMain\Picket.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsMain\Area.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsMain\Profile.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsMain\Methodology.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsMain\Driver.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsMain\Generative.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsMain\Telemetry.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsMain\Measuring.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsMain\Worker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsMain\Supervisor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsMain\Chief.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsMain\Engineer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsMain\Order.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormsMain\Cursomer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Forms\ForgotPassword.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Forms\FormLoading.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Forms\FormLoading1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Forms\FormReg.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Forms\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Forms\MainWindowOperator.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Forms\NumberADDGen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Forms\NumberADDMeauring.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Forms\NumberSupervisor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Forms\NumberList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Forms\NumberContract.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Forms\NumberProekt.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Forms\NumberClient.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Forms\NumberArea.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Forms\NumberMethodology.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Forms\NumberProfile.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Forms\NumberPicket.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Forms\NumberEq.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Forms\NumberGenerative.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Forms\NumberMeasuring.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Forms\NumberMet.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Forms\NumberOrder.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FormsEdit\EditArea.xaml.cs">
+      <DependentUpon>EditArea.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEdit\EditClient.xaml.cs">
+      <DependentUpon>EditClient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEdit\EditContract.xaml.cs">
+      <DependentUpon>EditContract.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEdit\EditEquipment.xaml.cs">
+      <DependentUpon>EditEquipment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEdit\EditMethodology.xaml.cs">
+      <DependentUpon>EditMethodology.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEdit\EditOrder.xaml.cs">
+      <DependentUpon>EditOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEdit\EditPicket.xaml.cs">
+      <DependentUpon>EditPicket.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEdit\EditProekt.xaml.cs">
+      <DependentUpon>EditProekt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEdit\EditProfile.xaml.cs">
+      <DependentUpon>EditProfile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEdit\Equipment\EditGenerative.xaml.cs">
+      <DependentUpon>EditGenerative.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEdit\Equipment\EditMeasuring.xaml.cs">
+      <DependentUpon>EditMeasuring.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEdit\Equipment\EditTelemetry.xaml.cs">
+      <DependentUpon>EditTelemetry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEdit\Works\EditChief.xaml.cs">
+      <DependentUpon>EditChief.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEdit\Works\EditDriver.xaml.cs">
+      <DependentUpon>EditDriver.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEdit\Works\EditITR.xaml.cs">
+      <DependentUpon>EditITR.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEdit\Works\EditSupervisor.xaml.cs">
+      <DependentUpon>EditSupervisor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEdit\Works\EditWorker.xaml.cs">
+      <DependentUpon>EditWorker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCreate\CreatePicket.xaml.cs">
+      <DependentUpon>CreatePicket.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCreate\CreateArea.xaml.cs">
+      <DependentUpon>CreateArea.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCreate\CreateClient.xaml.cs">
+      <DependentUpon>CreateClient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCreate\CreateContract.xaml.cs">
+      <DependentUpon>CreateContract.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCreate\CreateEquipment.xaml.cs">
+      <DependentUpon>CreateEquipment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCreate\CreateMethodology.xaml.cs">
+      <DependentUpon>CreateMethodology.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCreate\CreateOrder.xaml.cs">
+      <DependentUpon>CreateOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCreate\CreateProekt.xaml.cs">
+      <DependentUpon>CreateProekt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCreate\CreateProfile.xaml.cs">
+      <DependentUpon>CreateProfile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCreate\Equipment\CreateGenerative.xaml.cs">
+      <DependentUpon>CreateGenerative.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCreate\Equipment\CreateMeasuring.xaml.cs">
+      <DependentUpon>CreateMeasuring.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCreate\Equipment\CreateTelemetry.xaml.cs">
+      <DependentUpon>CreateTelemetry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCreate\Works\CreateWorker.xaml.cs">
+      <DependentUpon>CreateWorker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCreate\Works\CreateSupervisor.xaml.cs">
+      <DependentUpon>CreateSupervisor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCreate\Works\CreateITR.xaml.cs">
+      <DependentUpon>CreateITR.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCreate\Works\CreateDriver.xaml.cs">
+      <DependentUpon>CreateDriver.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsCreate\Works\CreateChief.xaml.cs">
+      <DependentUpon>CreateChief.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMainOperator\Area1.xaml.cs">
+      <DependentUpon>Area1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMainOperator\Contract1.xaml.cs">
+      <DependentUpon>Contract1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMainOperator\Cursomer1.xaml.cs">
+      <DependentUpon>Cursomer1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMainOperator\Generative1.xaml.cs">
+      <DependentUpon>Generative1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMainOperator\Measuring1.xaml.cs">
+      <DependentUpon>Measuring1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMainOperator\Picket1.xaml.cs">
+      <DependentUpon>Picket1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMainOperator\Profile1.xaml.cs">
+      <DependentUpon>Profile1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMainOperator\Project1.xaml.cs">
+      <DependentUpon>Project1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMainOperator\Telemetry1.xaml.cs">
+      <DependentUpon>Telemetry1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMain\Equipment.xaml.cs">
+      <DependentUpon>Equipment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMain\Project.xaml.cs">
+      <DependentUpon>Project.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMain\Contract.xaml.cs">
+      <DependentUpon>Contract.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMain\Picket.xaml.cs">
+      <DependentUpon>Picket.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMain\Area.xaml.cs">
+      <DependentUpon>Area.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMain\Profile.xaml.cs">
+      <DependentUpon>Profile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMain\Methodology.xaml.cs">
+      <DependentUpon>Methodology.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMain\Driver.xaml.cs">
+      <DependentUpon>Driver.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMain\Generative.xaml.cs">
+      <DependentUpon>Generative.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMain\Telemetry.xaml.cs">
+      <DependentUpon>Telemetry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMain\Measuring.xaml.cs">
+      <DependentUpon>Measuring.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMain\Worker.xaml.cs">
+      <DependentUpon>Worker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMain\Supervisor.xaml.cs">
+      <DependentUpon>Supervisor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMain\Chief.xaml.cs">
+      <DependentUpon>Chief.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMain\Engineer.xaml.cs">
+      <DependentUpon>Engineer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMain\Order.xaml.cs">
+      <DependentUpon>Order.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMain\Cursomer.xaml.cs">
+      <DependentUpon>Cursomer.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Отчёты\Equipment\ReportTelemetry.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Отчёты\Equipment\ReportMeasuring.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Отчёты\Equipment\ReportGenerative.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Отчёты\Meaning\intermediateResult\ReportIntermediateResult2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Отчёты\Meaning\intermediateResult\ReportIntermediateResult3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Отчёты\Meaning\intermediateResult\ReportIntermediateResult1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Отчёты\Meaning\intermediateResult\ReportIntermediateResult.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Отчёты\Meaning\ReportTransformant2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Отчёты\Meaning\ReportTransformant3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Отчёты\Meaning\ReportTransformant1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Отчёты\Meaning\ReportfinalResult.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Отчёты\ReportArea.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Отчёты\ReportPersonal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Отчёты\ReportMethodology.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Отчёты\ReportOrder.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Отчёты\ReportPicket.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Отчёты\ReportProekt.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Отчёты\ReportProfile.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Отчёты\ReportEquipment.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Отчёты\ReportContract.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Отчёты\ReportClient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Отчёты\Works\ReportDriver.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Отчёты\Works\ReportITR.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Отчёты\Works\ReportSupervisor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Отчёты\Works\ReportWorker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Отчёты\Works\ReportChief.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\BdCon.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\launchSettings.json" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\symbol-warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\symbol-Power.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\export-pdf.png" />
+    <Resource Include="Image\export-TXT.png" />
+    <Resource Include="Image\export-XSL.png" />
+    <Resource Include="Image\export.png" />
+    <Resource Include="Image\export1.png" />
+    <Resource Include="Image\icon-Add.png" />
+    <Resource Include="Image\icon-browse.png" />
+    <Resource Include="Image\icon-refresh.png" />
+    <Resource Include="Image\IconProgram.png" />
+    <Resource Include="Image\icons-export-Txt.png" />
+    <Resource Include="Image\icons-Import-Txt.png" />
+    <Resource Include="Image\icons-Import-XSL.png" />
+    <Resource Include="Image\icons8-Export-Txt.png" />
+    <Resource Include="Image\icons8-Export-XLS.png" />
+    <Resource Include="Image\iconsClosePassword.png" />
+    <Resource Include="Image\iconsDisplayPassword.png" />
+    <Resource Include="Image\import.png" />
+    <Resource Include="Image\import1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Forms\IconProgram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="IconProgram.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\icons-Report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\icons-Print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\IconProgram.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Подпись.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\icons-form.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\Fody.6.5.5\build\Fody.targets" Condition="Exists('packages\Fody.6.5.5\build\Fody.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Fody.6.5.5\build\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Fody.6.5.5\build\Fody.targets'))" />
+    <Error Condition="!Exists('packages\Costura.Fody.5.7.0\build\Costura.Fody.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Costura.Fody.5.7.0\build\Costura.Fody.props'))" />
+    <Error Condition="!Exists('packages\Costura.Fody.5.7.0\build\Costura.Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Costura.Fody.5.7.0\build\Costura.Fody.targets'))" />
+  </Target>
+  <Import Project="packages\Costura.Fody.5.7.0\build\Costura.Fody.targets" Condition="Exists('packages\Costura.Fody.5.7.0\build\Costura.Fody.targets')" />
+</Project>

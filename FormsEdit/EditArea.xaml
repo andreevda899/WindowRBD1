@@ -1,0 +1,159 @@
+﻿<Window x:Class="WindowRBD1.FormsEdit.EditArea"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WindowRBD1.FormsEdit"
+      mc:Ignorable="d"
+      Title="Relational database v.1.0"
+      Height="891" Width="1920"
+      WindowState="Maximized" >
+
+    <Grid Margin="0,10,10,-6" >
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF02688A" Offset="0.062"/>
+                <GradientStop Color="#FF310946" Offset="0.862"/>
+                <GradientStop Color="#FF00334E" Offset="0.365"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label Content="Наименование площади" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="33,282,0,0" VerticalAlignment="Top" Width="284" Height="50"/>
+        <Label Content="Список координат углов периметра" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="15" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="33,474,0,0" VerticalAlignment="Top" Width="284" Height="50"/>
+        <Label Content="Супервайзер полевых работ" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" HorizontalAlignment="Left" Margin="828,474,0,0" Background="GhostWhite" VerticalAlignment="Top" Width="302" Height="50"/>
+        <Label Content="Супервайзер обработки данных" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" HorizontalAlignment="Left" Margin="828,577,0,0" Background="GhostWhite" VerticalAlignment="Top" Width="302" Height="50"/>
+        <Label Content="Длина периметра" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="33,577,0,0" VerticalAlignment="Top" Width="284" Height="50"/>
+        <Label Content="Величина площади окружённая периметром" Background="GhostWhite" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="13" FontWeight="Bold" HorizontalAlignment="Left" Margin="828,184,0,0" VerticalAlignment="Top" Width="302" Height="50"/>
+        <Label Content="Дата и время окончания работ" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="828,381,0,0" VerticalAlignment="Top" Width="302" Height="50"/>
+        <Label Content="Дата и время начала работ" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="828,282,0,0" VerticalAlignment="Top" Width="302" Height="50"/>
+
+        <Button x:Name="btEdit" Content="Изменить" Background="GhostWhite" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" Margin="470,671,0,0" VerticalAlignment="Top" Height="93" Width="260" Click="btEdit_Click"/>
+        <Button x:Name="btClose" Content="Отменить" Background="GhostWhite" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" Margin="800,671,0,0" VerticalAlignment="Top" Height="93" Width="261" Click="btClose_Click"/>
+
+        <ComboBox x:Name="txtList"  HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" Margin="367,474,0,0" VerticalAlignment="Top" Width="195" Height="50"/>
+        <TextBox x:Name="txtSizeArea" MaxLength = "30" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" Margin="1153,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="185" Height="50" />
+        <TextBox x:Name="txtPerimeterLength" MaxLength = "30" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" Margin="367,577,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" Height="50"/>
+        <ComboBox x:Name="txtSupervisorData" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" Margin="1153,577,0,0" VerticalAlignment="Top" Width="185" Height="50" />
+        <ComboBox x:Name="txtSupervisorOrder" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" Margin="1153,474,0,0" VerticalAlignment="Top" Width="185" Height="50"/>
+        <TextBox x:Name="txtArea" MaxLength = "100" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left"  FontSize="18" FontWeight="Bold" Background="GhostWhite" Margin="367,282,0,0"  VerticalAlignment="Top" Width="195" Height="50"/>
+
+        <Label x:Name="Time"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="13,33,0,0" VerticalAlignment="Top" Height="60" Width="auto"/>
+        <Label Content="Номер площади" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="33,182,0,0" VerticalAlignment="Top" Width="284" Height="50"/>
+        <ComboBox x:Name="txtNumber" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left"  FontSize="18" FontWeight="Bold" Background="GhostWhite" Margin="367,184,0,0"  VerticalAlignment="Top" Width="195" Height="50" SelectionChanged="txtNumber_SelectionChanged"/>
+
+        <Label  Content="Редактирования Площади" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="570,40,0,0" VerticalAlignment="Top" Height="69" Width="425"/>
+        <Label Content="Номер профиля" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="33,381,0,0" VerticalAlignment="Top" Width="284" Height="50"/>
+        <ComboBox x:Name="txtProfile" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left"  FontSize="18" FontWeight="Bold" Background="GhostWhite" Margin="367,381,0,0"  VerticalAlignment="Top" Width="195" Height="50"/>
+        <Button  HorizontalAlignment="Left" Background="GhostWhite" x:Name="btPoisk" Click="btPoisk_Click" Margin="584,381,0,0" VerticalAlignment="Top" Height="50">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-browse.png" RenderTransformOrigin="0.45,0.697" Height="39"/>
+            </StackPanel>
+        </Button>
+        <Button  HorizontalAlignment="Left" Background="GhostWhite" x:Name="btADD" Click="btAdd_Click" Margin="639,381,0,0" VerticalAlignment="Top" Height="50">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-Add.png" RenderTransformOrigin="0.45,0.697" Height="39"/>
+            </StackPanel>
+        </Button>
+
+        <Button  HorizontalAlignment="Left" Background="GhostWhite" x:Name="btPoisk1" Click="btPoisk1_Click" Margin="584,184,0,0" VerticalAlignment="Top" Height="50">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-browse.png" RenderTransformOrigin="0.45,0.697" Height="39"/>
+            </StackPanel>
+        </Button>
+        <Button  HorizontalAlignment="Left" Background="GhostWhite" x:Name="btADD1" Click="btAdd1_Click" Margin="639,184,0,0" VerticalAlignment="Top" Height="50">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-Add.png" RenderTransformOrigin="0.45,0.697" Height="39"/>
+            </StackPanel>
+        </Button>
+
+        <Button  HorizontalAlignment="Left" Height="50" Background="GhostWhite" Click="btRefresh4_Click" Margin="700,184,0,0" VerticalAlignment="Top">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-refresh.png" RenderTransformOrigin="0.537,0.679" Height="39"/>
+            </StackPanel>
+        </Button>
+
+        <DatePicker x:Name="dateBeginning" FontSize="18" HorizontalContentAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Background="GhostWhite" Margin="1153,282,0,0" VerticalContentAlignment="Center" VerticalAlignment="Top" Height="50" Width="185">
+            <DatePicker.Resources>
+                <Style TargetType="DatePickerTextBox">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate>
+                                <TextBox Text="{Binding Path=SelectedDate, RelativeSource={RelativeSource AncestorType=DatePicker}, StringFormat={}{0:dd/MM/yyy hh:mm:ss}}"/>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </DatePicker.Resources>
+        </DatePicker>
+
+        <DatePicker x:Name="dateEnd" FontSize="18" HorizontalContentAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Background="GhostWhite" Margin="1153,381,0,0" VerticalContentAlignment="Center" VerticalAlignment="Top" Height="50" Width="185">
+            <DatePicker.Resources>
+                <Style TargetType="DatePickerTextBox">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate>
+                                <TextBox Text="{Binding Path=SelectedDate, RelativeSource={RelativeSource AncestorType=DatePicker}, StringFormat={}{0:dd/MM/yyy hh:mm:ss}}"/>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </DatePicker.Resources>
+        </DatePicker>
+        <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-refresh.png" RenderTransformOrigin="0.537,0.679" Margin="0,0,1871,832"/>
+        <Button  HorizontalAlignment="Left" Height="50" Background="GhostWhite" Click="btRefresh1_Click" Margin="700,381,0,0" VerticalAlignment="Top">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-refresh.png" RenderTransformOrigin="0.537,0.679" Height="39"/>
+            </StackPanel>
+        </Button>
+        <Button  HorizontalAlignment="Left" Background="GhostWhite" x:Name="btPoisk2" Click="btPoisk_Click" Margin="584,474,0,0" VerticalAlignment="Top" Height="50">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-browse.png" RenderTransformOrigin="0.45,0.697" Height="39"/>
+            </StackPanel>
+        </Button>
+        <Button  HorizontalAlignment="Left" Background="GhostWhite" x:Name="btADD2" Click="btAdd_Click" Margin="639,474,0,0" VerticalAlignment="Top" Height="50">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-Add.png" RenderTransformOrigin="0.45,0.697" Height="39"/>
+            </StackPanel>
+        </Button>
+        <Button  HorizontalAlignment="Left" Height="50" Background="GhostWhite" Click="btEdit1_Click" Margin="700,474,0,0" VerticalAlignment="Top">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-Edit.png" RenderTransformOrigin="0.537,0.679" Height="39"/>
+            </StackPanel>
+        </Button>
+        <Button  HorizontalAlignment="Left" Height="50" Background="GhostWhite" Click="btRefresh_Click" Margin="767,474,0,0" VerticalAlignment="Top">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-refresh.png" RenderTransformOrigin="0.537,0.679" Height="39"/>
+            </StackPanel>
+        </Button>
+        <Button  HorizontalAlignment="Left" Background="GhostWhite" Click="btPoisk3_Click" Margin="1361,474,0,0" VerticalAlignment="Top" Height="50">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-browse.png" RenderTransformOrigin="0.45,0.697" Height="39"/>
+            </StackPanel>
+        </Button>
+        <Button  HorizontalAlignment="Left" Background="GhostWhite" Click="btAdd3_Click" Margin="1417,474,0,0" VerticalAlignment="Top" Height="50">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-Add.png" RenderTransformOrigin="0.45,0.697" Height="39"/>
+            </StackPanel>
+        </Button>
+        <Button  HorizontalAlignment="Left" Background="GhostWhite" Click="btPoisk3_Click" Margin="1361,577,0,0" VerticalAlignment="Top" Height="50">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-browse.png" RenderTransformOrigin="0.45,0.697" Height="39"/>
+            </StackPanel>
+        </Button>
+        <Button  HorizontalAlignment="Left" Background="GhostWhite" Click="btAdd3_Click" Margin="1417,577,0,0" VerticalAlignment="Top" Height="50">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-Add.png" RenderTransformOrigin="0.45,0.697" Height="39"/>
+            </StackPanel>
+        </Button>
+        <Button  HorizontalAlignment="Left" Height="50" Background="GhostWhite" Click="btRefresh2_Click" Margin="1476,474,0,0" VerticalAlignment="Top">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-refresh.png" RenderTransformOrigin="0.537,0.679" Height="39"/>
+            </StackPanel>
+        </Button>
+        <Button  HorizontalAlignment="Left" Height="50" Background="GhostWhite" Click="btRefresh3_Click" Margin="1476,577,0,0" VerticalAlignment="Top">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-refresh.png" RenderTransformOrigin="0.537,0.679" Height="39"/>
+            </StackPanel>
+        </Button>
+
+    </Grid>
+</Window>

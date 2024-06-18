@@ -1,0 +1,99 @@
+﻿<Window x:Class="WindowRBD1.Forms.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindowRBD1"
+        mc:Ignorable="d"
+        Title="Relational database v.1.0" 
+        WindowState="Maximized" >
+    <Grid >
+
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF02688A" Offset="0.062"/>
+                <GradientStop Color="#FF310946" Offset="0.862"/>
+                <GradientStop Color="#FF00334E" Offset="0.365"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+      
+        <StackPanel  
+            Background="Black" Width="400" Height="193" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,5">
+            <Button x:Name="AddCommand" Content="Добавить" FontSize="18" FontWeight="Bold" Width="326" Height="50" Margin="4" />
+            <Button x:Name="EditCommand" Content="Изменить" FontSize="18" FontWeight="Bold" Width="326" Height="50" Margin="4" />
+            <Button x:Name="DeleteCommand" Content="Удалить" FontSize="18" FontWeight="Bold" Width="326" Height="50" Margin="4" />
+        </StackPanel>
+
+        <ScrollViewer HorizontalAlignment="Left" VerticalAlignment="Top" Width="400" Height ="600" >
+            <StackPanel Background="Black" Width="382" Height="1150">
+                <Button x:Name="CursomerCommand" FontSize="18" FontWeight="Bold" Content="Заказчики" Width="326" Height="50" Click="CursomerCommand_Click" Margin="4"/>
+                <Button x:Name="ProjectCommand" FontSize="18" FontWeight="Bold" Content="Проекты" Width="326" Height="50" Margin="4" Click="ProjectCommand_Click"/>
+                <Button x:Name="ContractCommand" FontSize="18" FontWeight="Bold" Content="Договоры" Width="326" Height="50" Margin="4" Click="ContractCommand_Click"/>
+                <Button x:Name="PicketCommand" FontSize="18" FontWeight="Bold" Content="Пикет"  Click="PicketCommand_Click" Width="326" Height="50" Margin="4"/>
+                <Button x:Name="AreaCommand" FontSize="18" FontWeight="Bold" Content="Площадь" Click="AreaCommand_Click" Width="326" Height="50" Margin="4"/>
+                <Button x:Name="ProfileCommand" FontSize="18" FontWeight="Bold" Content="Профиль" Click="ProfileCommand_Click" Width="326" Height="50" Margin="4" />
+                <Button x:Name="OrderCommand" FontSize="18" FontWeight="Bold" Content="Полевой отряд" Width="326" Height="50" Margin="4" Click="OrderCommand_Click"/>
+                <Button x:Name="EngineerCommand" FontSize="18" FontWeight="Bold" Content="ИТР"  Width="326" Click="EngineerCommand_Click" Height="50" Margin="4"/>
+                <Button x:Name="ChiefCommand" FontSize="18" FontWeight="Bold" Content="Начальник отряда"  Width="326" Height="50" Margin="4" Click="ChiefCommand_Click"/>
+                <Button x:Name="WorkerCommand" FontSize="18" FontWeight="Bold" Content="Рабочие"  Width="326" Height="50" Margin="4" Click="WorkerCommand_Click"  />
+                <Button x:Name="DriverCommand" FontSize="18" FontWeight="Bold" Content="Водители" Click="DriverCommand_Click" Width="326" Height="50" Margin="4"/>
+                <Button x:Name="SupervisorCommand" FontSize="18" FontWeight="Bold" Content="Супервайзер"  Click="SupervisorCommand_Click" Width="326" Height="50" Margin="4"/>
+                <Button x:Name="MeasuringCommand" FontSize="18" FontWeight="Bold" Content="Измерительное оборудование" Click="MeasuringCommand_Click" Width="326" Height="50" Margin="4"/>
+                <Button  x:Name="GenerativeCommand" FontSize="18" FontWeight="Bold" Content="Генераторное оборудование" Click="GenerativeCommand_Click" Width="326" Height="50" Margin="4"/>
+                <Button x:Name="TelemetryCommand" FontSize="18" FontWeight="Bold" Content="Телеметрическое оборудование" Click="TelemetryCommand_Click" Width="326" Height="50" Margin="4" />
+                <Button x:Name="MethodologyCommand" FontSize="18" FontWeight="Bold" Content="Методика" Click="MethodologyCommand_Click" Width="326" Height="50" Margin="4"/>
+                <Button x:Name="EquipmentCommand" FontSize="18" FontWeight="Bold" Content="Набор Оборудования" Click="EquipmentCommand_Click" Width="326" Height="50" Margin="4"/>
+                <Button x:Name="MeaningCommand" FontSize="18" FontWeight="Bold" Content="Исследования" Click="MeaningCommand_Click" Width="326" Height="50" Margin="4"/>
+                <Button x:Name="PersonalCommand" FontSize="18" FontWeight="Bold" Content="Пользователи" Click="PersonalCommand_Click" Width="326" Height="50" Margin="4"/>
+            </StackPanel>
+        </ScrollViewer>
+
+
+        <ScrollViewer HorizontalAlignment="Right" Margin="0,0,10,0" VerticalAlignment="Top" Width="1079" Height="429">
+            <StackPanel Height="490">
+                <DockPanel  HorizontalAlignment ="Left" Background="Black" Width="1040"  Height="197"  Margin="5">
+                    <ComboBox x:Name="cmbTab" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  Width="250" Height="60" Margin="20,5,5,5"/>
+                    <TextBox x:Name="txtBox1" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="Azure" HorizontalAlignment="Center" Width="150" Margin="20,5,5,5" Height="60" />
+                    <Button Content="Найти" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center" Width="150" Height="60" Margin="20,5,5,5"/>
+                    <Button x:Name="btRefresh" Width="60" Height="60" Margin="15,5,5,5" >
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-refresh.png"/>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="btReport" Width="60" Height="60" Margin="10">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icons-Report.png"/>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="btImport" Width="60" Height="60" Margin="10">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icons8-Export-Txt.png"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Button x:Name="btExport" Width="60" Height="60" Margin="10">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icons8-Export-XLS.png"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Button x:Name="btPower" Width="60" Height="60" Click="btClose_Click" Margin="10">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\symbol-Power.png"/>
+                        </StackPanel>
+                    </Button>
+                </DockPanel>
+
+                <DataGrid x:Name="dataGridView1" FontSize="18" FontWeight="Bold" HorizontalAlignment="Left" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="dataGridView1_SelectionChanged" Margin="5" Width="1040" Height="203"/>
+
+            </StackPanel>
+        </ScrollViewer>
+
+
+
+
+
+
+
+    </Grid>
+</Window>

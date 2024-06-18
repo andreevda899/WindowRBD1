@@ -1,0 +1,229 @@
+use [Diplom2.2]
+go
+create schema Proekt
+
+--create table Proekt.Пользователи(
+--[Номер пользователя]  int not null identity primary key,
+--[ФИО] nvarchar(100),
+--[Логин] nvarchar(30),
+--[Пароль] nvarchar(30),
+--[Роль] nvarchar(30) CHECK ([Роль] IN('Оператор', 'Руководитель')),
+--[Дата и время последнего входа] datetime
+--)
+
+--create table Proekt.Заказчик(
+--[Номер заказчика] int not null identity primary key,
+--[Название компаний] nvarchar(100),
+--[Юридический адрес] nvarchar(100),
+--[Фактический адрес] nvarchar(100),
+--[ИНН] nvarchar(14),
+--[КПК] nvarchar(10),
+--[Расчетный счёт] nvarchar(23),
+--[Корреспондентский счёт] nvarchar(23),
+--[Представитель] nvarchar(100),
+--[Телефон представителя] nvarchar(15),
+--[Адрес электронной почты] nvarchar(100),
+--[Сайт] nvarchar(100),
+--[Дата и время появления записи] datetime,
+--[Дата и время изменения записи] datetime
+--)
+
+--create table Proekt.[Список координат углов периметра](
+--[Номер списка углов периметра] int not null identity primary key,
+--[x1] float,
+--[y1] float,
+--[x2] float,
+--[y2] float,
+--[x3] float,
+--[y3] float
+--)
+
+--create table Proekt.Площади(
+--[Номер площади] int not null identity primary key,
+--[Наименование площади] nvarchar(100),
+--[Номер списка углов периметра] int references Proekt.[Список координат углов периметра]([Номер списка углов периметра]),
+--[Величина площади окружённая периметром] float,
+--[Дата и время начала работ] datetime,
+--[Дата и время окончания работ] datetime,
+--[Дата и время появления записи] datetime,
+--[Дата и время изменения записи] datetime,
+--[Супервайзер полевых работ] int,
+--[Супервайзер обработки данных] int
+--)
+
+--create table Proekt.Договор(
+--[Номер договора]  int not null identity primary key,
+--[Наименование договора] nvarchar(30),
+--[Начала] date,
+--[Окончания] date,
+--[Стоимость] money,
+--[Дата и время появления записи] datetime,
+--[Дата и время изменения записи] datetime
+--)
+
+--create table Proekt.[Описание генераторной установки] (
+--[Номер описания ген.установки] int not null identity primary key,
+--[Размер] nvarchar(100)
+--)
+
+--create table Proekt.[Описание измерительной установки] (
+--[Номер описания измер.установки] int not null identity primary key,
+--[Размер] nvarchar(100),
+--[Разносы] nvarchar(100)
+--)
+
+--create table Proekt.Методика(
+--[Номер методики] int not null identity primary key,
+--[Наименование методики] nvarchar(100),
+--[Номер описания ген.установки] int references Proekt.[Описание генераторной установки]([Номер описания ген.установки]),
+--[Номер описания измер.установки] int references Proekt.[Описание измерительной установки]([Номер описания измер.установки]),
+--[Описание телеметрической установки] nvarchar(100),
+--[Продолжительность импульса] nvarchar(10),
+--[Продолжительность паузы] nvarchar(10), 
+--[Сила тока] float
+--)
+
+--create table Proekt.ИТР(
+--[Номер ИТР] int not null identity primary key,
+--ФИО nvarchar(100),
+--[Квалификация] nvarchar(50),
+--[Опыт работы в коллективе] nvarchar(25),
+--[Общий опыт работы по специальности] nvarchar(50),
+--[Дата прохождения медосмотра] date
+--)
+
+--create table Proekt.Рабочие(
+--[Номер Рабочего]  int not null identity primary key,
+--ФИО nvarchar(100),
+--[Квалификация] nvarchar(50),
+--[Опыт работы в коллективе] nvarchar(25),
+--[Общий опыт работы по специальности] nvarchar(50),
+--[Дата прохождения медосмотра] date
+--)
+
+--create table Proekt.Водители(
+--[Номер Водителя]  int not null identity primary key,
+--ФИО nvarchar(100),
+--[Квалификация] nvarchar(50),
+--[Опыт работы в коллективе] nvarchar(25),
+--[Общий опыт работы по специальности] nvarchar(50),
+--[Дата прохождения медосмотра] date
+--)
+
+--create table Proekt.Супервайзер(
+--[Номер Супервайзера]  int not null identity primary key,
+--ФИО nvarchar(100),
+--[Квалификация] nvarchar(50),
+--[Опыт работы в коллективе] nvarchar(25),
+--[Общий опыт работы по специальности] nvarchar(50),
+--[Дата прохождения медосмотра] date
+--)
+
+--create table Proekt.[Начальник отряда](
+--[Номер Начальника] int not null identity primary key,
+--ФИО nvarchar(100),
+--[Квалификация] nvarchar(50),
+--[Опыт работы в коллективе] nvarchar(25),
+--[Общий опыт работы по специальности] nvarchar(50),
+--[Дата прохождения медосмотра] date
+--)
+
+--create table Proekt.[Полевой отряд](
+--[Номер отряда]  int not null identity primary key,
+--[Номер Начальника]  int references Proekt.[Начальник отряда]([Номер Начальника]),
+--[Номер ИТР]  int references Proekt.ИТР([Номер ИТР]),
+--[Номер Водителя]  int references Proekt.Водители([Номер Водителя]),
+--[Номер Рабочего]  int references Proekt.Рабочие([Номер Рабочего]),
+--[Номер Супервайзера]  int references Proekt.Супервайзер([Номер Супервайзера])
+--)
+
+--create table Proekt.[Генеративное оборудование](
+--[Номер генеративного оборудования]  int not null identity primary key,
+--[Наименование] nvarchar(100),
+--[Инвентарный номер] nvarchar(100),
+--[Дата приобретения] datetime,
+--[Дата поверки] datetime,
+--[Характеристики] nvarchar(100)
+--)
+
+--create table Proekt.[Измерительное оборудование](
+--[Номер измерительного оборудования]  int not null identity primary key,
+--[Наименование] nvarchar(100),
+--[Инвентарный номер] nvarchar(100),
+--[Дата приобретения] datetime,
+--[Дата поверки] datetime,
+--[Характеристики] nvarchar(100)
+--)
+
+--create table Proekt.[Телеметрическое оборудование](
+--[Номер телеметрического оборудования] int not null identity primary key,
+--[Наименование] nvarchar(100),
+--[Инвентарный номер] nvarchar(100),
+--[Дата приобретения] datetime,
+--[Дата поверки] datetime,
+--[Характеристики] nvarchar(100)
+--)
+
+--create table Proekt.Оборудования(
+--[Номер Оборудования] int not null identity primary key,
+--[Номер генеративного оборудования] int references Proekt.[Генеративное оборудование]([Номер генеративного оборудования]),
+--[Номер измерительного оборудования] int references Proekt.[Измерительное оборудование]([Номер измерительного оборудования]),
+--[Номер телеметрического оборудования] int references Proekt.[Телеметрическое оборудование]([Номер телеметрического оборудования])
+--)
+
+--create table Proekt.Пикет(
+--[Номер пикета] int not null identity primary key,
+--[Наименование пикета] nvarchar(50),
+--[Координата]  nvarchar(50),
+--[Вид измерения] nvarchar(25) CHECK ([Вид измерения] IN('рядовое', 'контрольное', 'опытное')),
+--[Окончательный результат измерения (кривая измерения)] nvarchar(30),
+--[Номер отряда] int references Proekt.[Полевой отряд]([Номер отряда]),
+--[Номер методики] int references Proekt.Методика([Номер методики]),
+--[Номер оборудования] int references Proekt.Оборудования([Номер Оборудования]),
+--[Трансформанта измерения 1] nvarchar(30),
+--[Трансформанта измерения 2] nvarchar(30),
+--[Трансформанта измерения 3] nvarchar(30),
+--[Промежуточные результаты измерения] nvarchar(30),
+--[Промежуточные результаты измерения 1] nvarchar(30),
+--[Промежуточные результаты измерения 2] nvarchar(30),
+--[Промежуточные результаты измерения 3] nvarchar(30)
+--)
+
+--create table Proekt.Профили(
+--[Номер профиля] int not null identity primary key,
+--[Наименование профиля] nvarchar(100),
+--[Номер площади] int references Proekt.Площади([Номер площади]),
+--[Номер пикета] int references Proekt.Пикет([Номер пикета]),
+--[Координаты начала] nvarchar(100),
+--[Координаты изломов] nvarchar(100),
+--[Координаты окончания] nvarchar(100),
+--[Длина] float,
+--[Дата и время начала работ] datetime,
+--[Дата и время окончания работ] datetime,
+--[Дата и время появления записи] datetime,
+--[Дата и время изменения записи] datetime,
+--)
+
+--create table Proekt.Проект(
+--[Номер проекта] int not null identity primary key,
+--[Название проекта] nvarchar(70),
+--[Номер заказчика] int references Proekt.Заказчик([Номер заказчика]),
+--[Номер договора] int references Proekt.Договор([Номер договора]),
+--[Номер площади] int references Proekt.Площади([Номер площади]),
+--[Дата и время появления записи] datetime,
+--[Дата и время изменения записи] datetime
+--)
+
+--Alter table Proekt.[Начальник отряда] ADD ФИО nvarchar(100)
+--Alter table Proekt.Супервайзер  ADD ФИО nvarchar(100)
+--Alter table Proekt.Водители  ADD ФИО nvarchar(100)
+--Alter table Proekt.Рабочие ADD ФИО nvarchar(100)
+--Alter table Proekt.ИТР ADD ФИО nvarchar(100)
+--USE [Diplom2.2]
+--GO
+--EXEC sp_changedbowner 'sa'
+
+
+txtFio,txtCompetence,txtExperience,txtExperienced,dateMedical
+
+txtName,txtInventory,dateVerification,datePurchases,txtSpecifications

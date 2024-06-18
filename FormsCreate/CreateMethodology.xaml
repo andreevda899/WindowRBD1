@@ -1,0 +1,77 @@
+﻿<Window x:Class="WindowRBD1.FormsCreate.CreateMethodology"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WindowRBD1.FormsCreate"
+      mc:Ignorable="d" 
+        Title="Relational database v.1.0"
+      WindowState="Maximized" >
+
+    <Grid Margin="0,10,10,-6" Width="1569" Height="825" >
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF02688A" Offset="0.062"/>
+                <GradientStop Color="#FF310946" Offset="0.862"/>
+                <GradientStop Color="#FF00334E" Offset="0.365"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Label Content="Наименование методики" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="105,162,0,0" VerticalAlignment="Top" Width="284" Height="50"/>
+        <Label Content="Описание генераторной" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="105,280,0,0" VerticalAlignment="Top" Width="284" Height="50"/>
+        <Label Content="Описание измерительной" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="105,398,0,0" VerticalAlignment="Top" Width="284" Height="50"/>
+        <Label Content="Описание телеметрической" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="105,517,0,0" VerticalAlignment="Top" Width="284" Height="50"/>
+        <Label Content="Продолжительность импульса" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="882,162,0,0" VerticalAlignment="Top" Width="284" Height="50" RenderTransformOrigin="0.446,0.59"/>
+        <Label Content="Продолжительность паузы" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="882,280,0,0" VerticalAlignment="Top" Width="284" Height="50"/>
+        <Label Content="Сила тока" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="882,398,0,0" VerticalAlignment="Top" Width="284" Height="50"/>
+
+        <Button x:Name="btCreate"  Content="Создать" Background="GhostWhite" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" Margin="466,660,0,0" VerticalAlignment="Top" Height="100" Width="232" Click="btCreate_Click"/>
+        <Button x:Name="btClose" Content="Отменить" Background="GhostWhite" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" Margin="836,660,0,0" VerticalAlignment="Top" Height="100" Width="232" Click="BtClose_Click"/>
+
+        <TextBox x:Name="txtNameMethodology" MaxLength="100" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" Margin="434,162,0,0" VerticalAlignment="Top" Width="230" Height="50"/>
+        <ComboBox x:Name="txtGenerative" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" Margin="434,280,0,0" VerticalAlignment="Top" Width="230" Height="50"/>
+        <ComboBox x:Name="txtMeasuring" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" Margin="434,398,0,0" VerticalAlignment="Top" Width="230" Height="50"/>
+        <TextBox x:Name="txtTelemetry" MaxLength="100" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" Margin="434,517,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="230" Height="50"/>
+        <TextBox x:Name="txtImpulse" MaxLength="10" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" Margin="1196,162,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" Height="50"/>
+        <TextBox x:Name="txtPause" MaxLength="10" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" Margin="1196,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" Height="50"/>
+        <TextBox x:Name="txtCurrent" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" Margin="1196,398,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" Height="50"/>
+
+        <Label  Content="Добавления Методики исследования" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24" FontWeight="Bold" Background="GhostWhite"  HorizontalAlignment="Left" Margin="494,36,0,0" VerticalAlignment="Top" Height="68" Width="487"/>
+
+        <Label x:Name="Time"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="13,33,0,0" VerticalAlignment="Top" Height="60" Width="auto"/>
+
+        <Button  HorizontalAlignment="Left" Height="50" Background="GhostWhite" Margin="680,280,0,0" Click="btPoisk1_Click" VerticalAlignment="Top">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-browse.png" RenderTransformOrigin="0.537,0.679" Height="39"/>
+            </StackPanel>
+        </Button>
+        <Button  HorizontalAlignment="Left" Height="50" Background="GhostWhite" Margin="800,280,0,0" Click="btRefresh_Click" VerticalAlignment="Top">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-refresh.png" RenderTransformOrigin="0.537,0.679" Height="39"/>
+            </StackPanel>
+        </Button>
+        <Button  HorizontalAlignment="Left" Height="50" Background="GhostWhite" Margin="800,398,0,0" Click="btRefresh1_Click" VerticalAlignment="Top">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-refresh.png" RenderTransformOrigin="0.537,0.679" Height="39"/>
+            </StackPanel>
+        </Button>
+        <Button  HorizontalAlignment="Left" Height="50" Background="GhostWhite" Click="btAdd1_Click" Margin="740,280,0,0" VerticalAlignment="Top">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-Add.png" RenderTransformOrigin="0.537,0.679" Height="39"/>
+            </StackPanel>
+        </Button>
+
+        <Button  HorizontalAlignment="Left" Height="50" Background="GhostWhite" Click="btAdd2_Click" Margin="740,398,0,0" VerticalAlignment="Top">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-Add.png" RenderTransformOrigin="0.537,0.679" Height="39"/>
+            </StackPanel>
+        </Button>
+
+        <Button  HorizontalAlignment="Left" Height="50" Background="GhostWhite" Click="btPoisk2_Click" Margin="680,398,0,0" VerticalAlignment="Top">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-browse.png" RenderTransformOrigin="0.537,0.679" Height="39"/>
+            </StackPanel>
+        </Button>
+
+    </Grid>
+</Window>

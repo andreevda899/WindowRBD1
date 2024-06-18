@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WindowRBD1.FormsCreate.CreateArea" Collapsed="true">
+    <Position X="13.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAcAAAAAAAAAIAAAQAAAAAAAEQAABAIIAgAAAAAAA=</HashCode>
+      <FileName>FormsCreate\CreateArea.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowRBD1.FormsCreate.CreateClient" Collapsed="true">
+    <Position X="15" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>FormsCreate\CreateClient.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowRBD1.FormsCreate.CreateContract" Collapsed="true">
+    <Position X="14" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>FormsCreate\CreateContract.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowRBD1.FormsEdit.EditArea" Collapsed="true">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAYAAAAgAAAAAAgAQAAAAAAAEQAIhAIACgAAAAAAA=</HashCode>
+      <FileName>FormsEdit\EditArea.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowRBD1.FormsEdit.EditClient" Collapsed="true">
+    <Position X="15" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAgAAAAAAAAAAAAAAAAAACAgAAAAAAAAAAAA=</HashCode>
+      <FileName>FormsEdit\EditClient.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowRBD1.FormsEdit.EditContract" Collapsed="true">
+    <Position X="12.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAgAAAAAAAEAAAAIAAAAAAAgAIAAIAAAAAAA=</HashCode>
+      <FileName>FormsEdit\EditContract.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowRBD1.FormsMain.Area" Collapsed="true">
+    <Position X="12" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAEFAIAAEkQAJIACAIBAAUMBACAIogAAIBgWIvAAJCg=</HashCode>
+      <FileName>FormsMain\Area.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowRBD1.FormsMain.Cursomer" Collapsed="true">
+    <Position X="12" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAEBAIAAEkQQJIADAIBAAUMBACAYoAAAIBgWIvAAJCg=</HashCode>
+      <FileName>FormsMain\Cursomer.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowRBD1.FormsMain.Contract" Collapsed="true">
+    <Position X="12" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAEFAIAAEkQAJIADAIBAAUMBACAIpAAAIBgGIvAAJCg=</HashCode>
+      <FileName>FormsMain\Contract.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowRBD1.Forms.MainWindow" Collapsed="true">
+    <Position X="8.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAEFAAAAEgAAAIADAABAAAIBACAAIAAAABAUICAAICA=</HashCode>
+      <FileName>Forms\MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowRBD1.Forms.ForgotPassword" Collapsed="true">
+    <Position X="4" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAgI=</HashCode>
+      <FileName>Forms\ForgotPassword.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowRBD1.Forms.FormLoading" Collapsed="true">
+    <Position X="5.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAEAAAQAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Forms\FormLoading.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowRBD1.Forms.FormLoading1" Collapsed="true">
+    <Position X="10.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEgAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Forms\FormLoading1.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowRBD1.Forms.FormReg" Collapsed="true">
+    <Position X="4" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAEAAAAAAAAAAAAAQAAAAAAAAAAAQAAAAAIBAA=</HashCode>
+      <FileName>Forms\FormReg.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

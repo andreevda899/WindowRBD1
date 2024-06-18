@@ -1,0 +1,43 @@
+﻿<Window x:Class="WindowRBD1.Отчёты.ReportMeasuring"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindowRBD1.Отчёты"
+        mc:Ignorable="d" Title="Relational database v.1.0"  Height="949" Width="1920" WindowState="Maximized">
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF02688A" Offset="0.062"/>
+                <GradientStop Color="#FF310946" Offset="0.862"/>
+                <GradientStop Color="#FF00334E" Offset="0.365"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Image HorizontalAlignment="Left" Height="124" Margin="10,10,0,0" VerticalAlignment="Top" Width="126" Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\IconProgram.png"/>
+
+        <Label Content="Характеристики" Background="GhostWhite" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Margin="437,596,0,0" VerticalAlignment="Top" Width="316" Height="50"/>
+        <Label Content="Наименование" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="437,238,0,0" VerticalAlignment="Top" Width="316" Height="50"/>
+        <Label Content="Инвентарный номер" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="437,325,0,0" VerticalAlignment="Top" Width="316" Height="50"/>
+        <Label Content="Дата приобретения" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="437,408,0,0" VerticalAlignment="Top" Width="316" Height="50"/>
+        <Label Content="Дата поверки" Background="GhostWhite" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Margin="437,490,0,0" VerticalAlignment="Top" Width="316" Height="50"/>
+
+        <Label x:Name="txtCharacteristic" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" Margin="871,596,0,0" VerticalAlignment="Top" Width="298" Height="50"/>
+        <Label x:Name="txtName" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" Margin="871,238,0,0"  VerticalAlignment="Top" Width="298" Height="50" />
+        <Label x:Name="txtInventory" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" Margin="871,325,0,0" VerticalAlignment="Top" Width="298" Height="50"/>
+        <Label x:Name="dateVerification" FontSize="14" FontWeight="Bold" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Background="GhostWhite" Margin="871,408,0,0" VerticalContentAlignment="Center" VerticalAlignment="Top" Height="50" Width="298"/>
+        <Label Content="Характеристики" Background="GhostWhite" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Margin="437,596,0,0" VerticalAlignment="Top" Width="316" Height="50"/>
+        <Label x:Name="datePurchases" FontSize="14" FontWeight="Bold" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Background="GhostWhite" Margin="871,490,0,0" VerticalContentAlignment="Center" VerticalAlignment="Top" Height="50" Width="298"/>
+
+        <Label   Content="Номер измерительного оборудования" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="437,153,0,0" VerticalAlignment="Top" Width="316" Height="50"/>
+        <Label x:Name="txtNumber" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" Margin="871,147,0,0"  VerticalAlignment="Top" Width="298" Height="50"/>
+
+        <Label  Content="Отчёт о измерительноv оборудовании" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="23" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="570,40,0,0" VerticalAlignment="Top" Height="69" Width="488"/>
+
+        <Button HorizontalAlignment="Left" Margin="250,40,0,0" VerticalAlignment="Top" Height="69" Width="154" Click="Button_Click">
+            <Image  x:Name="res" Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icons-Print.png" Width="154" />
+        </Button>
+        <Image HorizontalAlignment="Left" Height="100" Margin="72,672,0,0" Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\Подпись.PNG" VerticalAlignment="Top" Width="347"/>
+
+    </Grid>
+</Window>

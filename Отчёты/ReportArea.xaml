@@ -1,0 +1,53 @@
+﻿<Window x:Class="WindowRBD1.Отчёты.ReportArea"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindowRBD1.Отчёты"
+        mc:Ignorable="d"
+        Title="Relational database v.1.0"  Height="949" Width="1920" WindowState="Maximized">
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF02688A" Offset="0.062"/>
+                <GradientStop Color="#FF310946" Offset="0.862"/>
+                <GradientStop Color="#FF00334E" Offset="0.365"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Image HorizontalAlignment="Left" Height="124" Margin="10,10,0,0" VerticalAlignment="Top" Width="126" Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\IconProgram.png"/>
+
+        <Label Content="Наименование площади" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="151,288,0,0" VerticalAlignment="Top" Width="271" Height="50"/>
+        <Label Content="Список координат углов периметра" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="151,482,0,0" VerticalAlignment="Top" Width="271" Height="50"/>
+        <Label Content="Супервайзер полевых работ" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Margin="861,482,0,0" Background="GhostWhite" VerticalAlignment="Top" Width="302" Height="50"/>
+        <Label Content="Супервайзер обработки данных" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Margin="861,581,0,0" Background="GhostWhite" VerticalAlignment="Top" Width="302" Height="50"/>
+        <Label Content="Длина периметра" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="151,583,0,0" VerticalAlignment="Top" Width="271" Height="50"/>
+        <Label Content="Величина площади окружённая периметром" Background="GhostWhite" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="13" FontWeight="Bold" HorizontalAlignment="Left" Margin="861,190,0,0" VerticalAlignment="Top" Width="302" Height="50"/>
+        <Label Content="Дата и время окончания работ" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="861,387,0,0" VerticalAlignment="Top" Width="302" Height="50"/>
+        <Label Content="Дата и время начала работ" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="861,287,0,0" VerticalAlignment="Top" Width="302" Height="50"/>
+
+        <Label x:Name="dateBeginning" HorizontalContentAlignment="Center" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Background="GhostWhite" Margin="1185,287,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Height="50" Width="310"/>
+        <Label x:Name="dateEnd" HorizontalContentAlignment="Center" FontSize="14" FontWeight="Bold"  HorizontalAlignment="Left" Background="GhostWhite" Margin="1185,385,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Height="50" Width="310"/>
+
+        <Label x:Name="txtList"  HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" Margin="485,480,0,0" VerticalAlignment="Top" Width="310" Height="50"/>
+        <Label x:Name="txtSizeArea"  HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" Margin="1186,189,0,0" VerticalAlignment="Top" Width="309" Height="50" />
+        <Label x:Name="txtPerimeterLength" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" Margin="485,583,0,0" VerticalAlignment="Top" Width="310" Height="50"/>
+        <Label x:Name="txtSupervisorData" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" Margin="1185,581,0,0" VerticalAlignment="Top" Width="310" Height="50" />
+        <Label x:Name="txtSupervisorOrder" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" Margin="1185,482,0,0" VerticalAlignment="Top" Width="310" Height="50"/>
+        <Label x:Name="txtArea" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left"  FontSize="14" FontWeight="Bold" Background="GhostWhite" Margin="485,288,0,0"  VerticalAlignment="Top" Width="310" Height="50"/>
+
+        <Label  Content="Отчёт о площади" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="23" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="570,40,0,0" VerticalAlignment="Top" Height="69" Width="425"/>
+
+        <Label Content="Номер профиля" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="151,387,0,0" VerticalAlignment="Top" Width="271" Height="50"/>
+        <Label x:Name="txtProfile" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left"  FontSize="14" FontWeight="Bold" Background="GhostWhite" Margin="485,383,0,0"  VerticalAlignment="Top" Width="310" Height="50"/>
+
+        <Label Content="Номер площади" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="151,188,0,0" VerticalAlignment="Top" Width="271" Height="50"/>
+        <Label x:Name="txtNumber" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left"  FontSize="14" FontWeight="Bold" Background="GhostWhite" Margin="485,190,0,0"  VerticalAlignment="Top" Width="310" Height="50"/>
+
+        <Button HorizontalAlignment="Left" Margin="250,40,0,0" VerticalAlignment="Top" Height="69" Width="154" Click="Button_Click">
+            <Image  x:Name="res" Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icons-Print.png" Width="154" />
+        </Button>
+        <Image HorizontalAlignment="Left" Height="100" Margin="72,672,0,0" Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\Подпись.PNG" VerticalAlignment="Top" Width="347"/>
+
+    </Grid>
+</Window>

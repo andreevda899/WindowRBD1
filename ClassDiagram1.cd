@@ -1,0 +1,580 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="WindowRBD1.Forms.ForgotPassword" BaseTypeListCollapsed="true">
+    <Position X="28.5" Y="47.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAgI=</HashCode>
+      <FileName>Forms\ForgotPassword.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.Forms.FormLoading" BaseTypeListCollapsed="true">
+    <Position X="19" Y="42.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAEAAAQAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Forms\FormLoading.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.Forms.FormLoading1" BaseTypeListCollapsed="true">
+    <Position X="19" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEgAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Forms\FormLoading1.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.Forms.FormReg" BaseTypeListCollapsed="true">
+    <Position X="24.5" Y="47" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAEAAAAAAAAAAAAAQAAAAAAAAAAAQAAAAAIBAA=</HashCode>
+      <FileName>Forms\FormReg.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.Forms.MainWindow" BaseTypeListCollapsed="true">
+    <Position X="19" Y="24.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>BAEFAAAAEgAAAIADAABAAAABACAAIAAAABAUICAAICA=</HashCode>
+      <FileName>Forms\MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.Forms.MainWindowOperator" BaseTypeListCollapsed="true">
+    <Position X="12.25" Y="45.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>BAEFAAAAEgAAAAABAABAAAAAACAAAAAAAAAUIAAAAAA=</HashCode>
+      <FileName>Forms\MainWindowOperator.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.FormsMain.Area" BaseTypeListCollapsed="true">
+    <Position X="24.25" Y="32.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>BAEFAIAAEkQAJIACAABAQUEBACAIogAAIBAWILAAJCg=</HashCode>
+      <FileName>FormsMain\Area.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.FormsMain.Chief" BaseTypeListCollapsed="true">
+    <Position X="20.25" Y="32.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>BAkFAIAAEkQAJIADAABAQUEBACAIoAAAIBAWILAAJAg=</HashCode>
+      <FileName>FormsMain\Chief.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.FormsMain.Contract" BaseTypeListCollapsed="true">
+    <Position X="14.25" Y="12.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>BAEFAIAAEkQAJIADAABAQUEBACAIpAAAIBAGILAAJCg=</HashCode>
+      <FileName>FormsMain\Contract.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.FormsMain.Cursomer" BaseTypeListCollapsed="true">
+    <Position X="22.25" Y="22.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>BAEBAIAAEkQQJIADAABAQUEBACAYoAAAIBAWILAAJCg=</HashCode>
+      <FileName>FormsMain\Cursomer.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.FormsMain.Driver" BaseTypeListCollapsed="true">
+    <Position X="34.25" Y="22.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>BAEFAIAAEkQAJIADAAJAQUEBACAIoAAAIAAWILAAJCg=</HashCode>
+      <FileName>FormsMain\Driver.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.FormsMain.Engineer" BaseTypeListCollapsed="true">
+    <Position X="26.25" Y="22.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>BAEFAIAAEkQAJIADAABAQUEAACQIoAAAIBAWILAAJCg=</HashCode>
+      <FileName>FormsMain\Engineer.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.FormsMain.Equipment" BaseTypeListCollapsed="true">
+    <Position X="10.25" Y="12.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>BAEFBIAAEkQAJIADAABAQUEBACAIoAAAIBAWIJAAJCg=</HashCode>
+      <FileName>FormsMain\Equipment.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.FormsMain.Generative" BaseTypeListCollapsed="true">
+    <Position X="18.25" Y="14.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>BAFFAIAAEkQAJIADAABAQUEBAAAIoAAAIBAWILAAJCg=</HashCode>
+      <FileName>FormsMain\Generative.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.FormsMain.Meaning" BaseTypeListCollapsed="true">
+    <Position X="11.75" Y="27.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>FBCAgJAAAkWAJACAAAAAQ0EAAAAYgAAAIQECAJAAhAg=</HashCode>
+      <FileName>FormsMain\Meaning.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.FormsMain.Measuring" BaseTypeListCollapsed="true">
+    <Position X="6.25" Y="12.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>BAEFAIAAEkQAJIADAABAwUEBACAIoAAAIBASILAAJCg=</HashCode>
+      <FileName>FormsMain\Measuring.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.FormsMain.Methodology" BaseTypeListCollapsed="true">
+    <Position X="22.25" Y="12.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>BAEFAIgAEkQAJIADAABAQUEBACAIgAAAIBAWILAAJCg=</HashCode>
+      <FileName>FormsMain\Methodology.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.FormsMain.Order" BaseTypeListCollapsed="true">
+    <Position X="26.25" Y="12.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>BAEFAIAAEkQAJIADAABAQUEBACAKoAAAIBAWILAABCg=</HashCode>
+      <FileName>FormsMain\Order.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.FormsMain.Picket" BaseTypeListCollapsed="true">
+    <Position X="23.25" Y="2.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>BAAFAIAAEkQAJIADAABAQUEBACAIoAAAIBCWILAAJCg=</HashCode>
+      <FileName>FormsMain\Picket.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.FormsMain.Profile" BaseTypeListCollapsed="true">
+    <Position X="15.25" Y="2.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>BAEFAIAAAkQAJIADAABAQUEBACAIoAAAIBAWILAAJCg=</HashCode>
+      <FileName>FormsMain\Profile.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.FormsMain.Project" BaseTypeListCollapsed="true">
+    <Position X="28.25" Y="32.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>BAEFAIAAEkQAJIADAABAQUEBACAIoAAAIBAWADMAJCg=</HashCode>
+      <FileName>FormsMain\Project.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.FormsMain.Supervisor" BaseTypeListCollapsed="true">
+    <Position X="30.25" Y="12.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>BAEFAIAAFkQAJAADAABAQUEBACAIoAAAIBAWILAAJCg=</HashCode>
+      <FileName>FormsMain\Supervisor.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.FormsMain.Telemetry" BaseTypeListCollapsed="true">
+    <Position X="30.25" Y="22.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>BAEEgIAAEkQAJIADAABAQUEBACAIoAAAIBAWILAAJCg=</HashCode>
+      <FileName>FormsMain\Telemetry.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.FormsMain.Worker" BaseTypeListCollapsed="true">
+    <Position X="32.25" Y="32.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>BAEFAIAAEkQAJIABAABAQUEBACAIoAAAIBEWILAAJCg=</HashCode>
+      <FileName>FormsMain\Worker.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.FormsCreate.Works.CreateChief" BaseTypeListCollapsed="true">
+    <Position X="16" Y="42.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>FormsCreate\Works\CreateChief.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.FormsCreate.Works.CreateDriver" BaseTypeListCollapsed="true">
+    <Position X="40" Y="32.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>FormsCreate\Works\CreateDriver.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.FormsCreate.Works.CreateITR" BaseTypeListCollapsed="true">
+    <Position X="39" Y="29.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>FormsCreate\Works\CreateITR.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.FormsCreate.Works.CreateSupervisor" BaseTypeListCollapsed="true">
+    <Position X="31" Y="9.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>FormsCreate\Works\CreateSupervisor.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.FormsCreate.Works.CreateWorker" BaseTypeListCollapsed="true">
+    <Position X="37" Y="39.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>FormsCreate\Works\CreateWorker.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.FormsEdit.Works.EditChief" BaseTypeListCollapsed="true">
+    <Position X="20.5" Y="45.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQIAAAggAAAAAAAgAAAAAAAAAAIgAAAACAAAAAAA=</HashCode>
+      <FileName>FormsEdit\Works\EditChief.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.FormsEdit.Works.EditDriver" BaseTypeListCollapsed="true">
+    <Position X="40.5" Y="20.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQIAAAggAAAAAAAAAAAAAAAAAAIgQAAACAAAAAAA=</HashCode>
+      <FileName>FormsEdit\Works\EditDriver.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.FormsEdit.Works.EditITR" BaseTypeListCollapsed="true">
+    <Position X="38.5" Y="24.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQIAAAggAAAAAAAAAAAAAAAAAAIgQAAACAAAAAAA=</HashCode>
+      <FileName>FormsEdit\Works\EditITR.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.FormsEdit.Works.EditSupervisor" BaseTypeListCollapsed="true">
+    <Position X="34.5" Y="13.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQIAAAggAAAAAAAAAAAAAAAAAAIgQAAACAAAAAAA=</HashCode>
+      <FileName>FormsEdit\Works\EditSupervisor.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.FormsEdit.Works.EditWorker" BaseTypeListCollapsed="true">
+    <Position X="36.5" Y="34.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQIAAAggAAAAAAAAAAAAAAAAAAIgQAAACAAAAAAA=</HashCode>
+      <FileName>FormsEdit\Works\EditWorker.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.FormsEdit.EditArea">
+    <Position X="32.5" Y="45.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAYAAAAgAAAAAAgAQAAAAAAAEQAIhAAACgAAAAAAA=</HashCode>
+      <FileName>FormsEdit\EditArea.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowRBD1.FormsCreate.CreateArea">
+    <Position X="16.75" Y="46" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAIAAAQAAAAAAAEQAABAAIAgAAAAAAA=</HashCode>
+      <FileName>FormsCreate\CreateArea.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowRBD1.FormsCreate.Equipment.CreateMeasuring">
+    <Position X="3" Y="19.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>FormsCreate\Equipment\CreateMeasuring.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowRBD1.FormsEdit.Equipment.EditMeasuring">
+    <Position X="2.5" Y="14.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIICAAggAAAAAAAQAAAAAAAAAAAgAAAACAAAAAAA=</HashCode>
+      <FileName>FormsEdit\Equipment\EditMeasuring.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowRBD1.FormsEdit.EditClient">
+    <Position X="32.25" Y="42.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAgAAAAAAAAAAAAAAAAAACAgAAAAAAAAAAAA=</HashCode>
+      <FileName>FormsEdit\EditClient.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowRBD1.FormsCreate.CreateClient">
+    <Position X="13" Y="41.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>FormsCreate\CreateClient.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowRBD1.FormsCreate.CreateProekt">
+    <Position X="23.75" Y="42" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AIAAUAAAAgAAAAAAAAAAAAICAAAAAIAAAIAAAAAAAAA=</HashCode>
+      <FileName>FormsCreate\CreateProekt.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowRBD1.FormsEdit.EditProekt">
+    <Position X="28.5" Y="42.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AIAAVAAAAgAAAAAAAAAAAAICAAAAAIgAAAAAAAAAAAA=</HashCode>
+      <FileName>FormsEdit\EditProekt.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowRBD1.FormsEdit.EditContract">
+    <Position X="7.25" Y="4.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAEAAAAAAAAAAAAgAAAAIAAAAAAA=</HashCode>
+      <FileName>FormsEdit\EditContract.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowRBD1.FormsCreate.CreateContract">
+    <Position X="12" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>FormsCreate\CreateContract.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowRBD1.FormsCreate.CreateMethodology">
+    <Position X="11" Y="9" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAUAAAAAAAAAIAAAAAAAAAAAAAAIAAAIAAAAAAAAA=</HashCode>
+      <FileName>FormsCreate\CreateMethodology.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowRBD1.FormsEdit.EditMethodology">
+    <Position X="31" Y="0.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAUAAAAgIAAAAAAAAAAAIAAAAAAIgAAAAABAAAAAA=</HashCode>
+      <FileName>FormsEdit\EditMethodology.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowRBD1.FormsEdit.Equipment.EditTelemetry">
+    <Position X="34.5" Y="17.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIICAAggAAAAAAAQAAAAAAAAAAAgAAAACAAAAAAA=</HashCode>
+      <FileName>FormsEdit\Equipment\EditTelemetry.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowRBD1.FormsCreate.Equipment.CreateTelemetry">
+    <Position X="38" Y="19.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>FormsCreate\Equipment\CreateTelemetry.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowRBD1.FormsCreate.CreateEquipment">
+    <Position X="7.75" Y="7.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAVIAEAgAAAAAAAAAAAAIRAAAAAIAAAIACAAAAAAA=</HashCode>
+      <FileName>FormsCreate\CreateEquipment.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowRBD1.FormsEdit.EditEquipment">
+    <Position X="3" Y="7" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAVIAAAgCAAAAAIAAAAAIAAAAAAIgQAAACAQCAAAA=</HashCode>
+      <FileName>FormsEdit\EditEquipment.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowRBD1.FormsEdit.EditOrder">
+    <Position X="37.25" Y="6.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>ACAAVIAAAgAAGBACAAAAAAIAAAAAAIkAABACCACAAAA=</HashCode>
+      <FileName>FormsEdit\EditOrder.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowRBD1.FormsCreate.CreateOrder">
+    <Position X="33.75" Y="5.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>ACAAVIAAAgAACBACAAAAAAIAAAAAAAEAAIACCACAAAA=</HashCode>
+      <FileName>FormsCreate\CreateOrder.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowRBD1.FormsCreate.CreatePicket">
+    <Position X="19.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAEAUAAAAgAAAAAAAAAgAAIEAAAAAIgAAIAAAAAAAAA=</HashCode>
+      <FileName>FormsCreate\CreatePicket.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowRBD1.FormsCreate.CreateProfile">
+    <Position X="11.75" Y="5.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAUBAAAgAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>FormsCreate\CreateProfile.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowRBD1.FormsEdit.EditProfile">
+    <Position X="19.25" Y="4.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAUAAAAAAQAAAAAAAAAAAAAAAAAIggAAAAEAEAAAA=</HashCode>
+      <FileName>FormsEdit\EditProfile.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowRBD1.FormsEdit.EditPicket">
+    <Position X="27.5" Y="4" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAEAVACAAgAQAAAAAAAgAAIEAAAAAIgAAACAAAAAAAA=</HashCode>
+      <FileName>FormsEdit\EditPicket.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowRBD1.FormsEdit.Meaning.EditfinalResult">
+    <Position X="4.75" Y="22" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAA0IAAAgAQAAAAAAAAAAAAAAEAAIgAAAACAAAAAAA=</HashCode>
+      <FileName>FormsEdit\Meaning\EditfinalResult.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowRBD1.FormsEdit.Meaning.EditTransformant1" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="38" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAA0IAAAgAQAAAAAAAAAAAAAAEAAIgAAAACAAAAAAA=</HashCode>
+      <FileName>FormsEdit\Meaning\EditTransformant1.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.FormsEdit.Meaning.EditTransformant2">
+    <Position X="4.75" Y="38" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAA0IAAAgAQAAAAAAAAAAAAAAEAAIgAAAACAAAAAAA=</HashCode>
+      <FileName>FormsEdit\Meaning\EditTransformant2.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowRBD1.FormsEdit.Meaning.EditTransformant3" BaseTypeListCollapsed="true">
+    <Position X="8.5" Y="30" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAA0IAAAgAQAAAAAAAAAAAAAAEAAIgAAAACAAAAAAA=</HashCode>
+      <FileName>FormsEdit\Meaning\EditTransformant3.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.FormsEdit.Meaning.EditIntermediateResult" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="22" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAA0IAAAgAQAAAAAAAAAAAAAAEAAIgAAAACAAAAAAA=</HashCode>
+      <FileName>FormsEdit\Meaning\intermediateResult\EditIntermediateResult.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.FormsEdit.Meaning.EditIntermediateResult1" BaseTypeListCollapsed="true">
+    <Position X="16.25" Y="26" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAA0IAAAgAQAAAAAAAAAAAAAAEAAIgAAAACAAAAAAA=</HashCode>
+      <FileName>FormsEdit\Meaning\intermediateResult\EditIntermediateResult1.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.FormsEdit.Meaning.EditIntermediateResult2">
+    <Position X="15.75" Y="38" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAA0IAAAgAQAAAAAAAAAAAAAAEAAIgAAAACAAAAAAA=</HashCode>
+      <FileName>FormsEdit\Meaning\intermediateResult\EditIntermediateResult2.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowRBD1.FormsEdit.Meaning.EditIntermediateResult3" BaseTypeListCollapsed="true">
+    <Position X="12.25" Y="23" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAA0IAAAgAQAAAAAAAAAAAAAAEAAIgAAAACAAAAAAA=</HashCode>
+      <FileName>FormsEdit\Meaning\intermediateResult\EditIntermediateResult3.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.FormsCreate.Meaning.intermediateResult.CreatefinalResult">
+    <Position X="5.25" Y="30.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAQIAAAgAQAAAAAAAAAAAAAAAAAIAAAIACAAAAAAA=</HashCode>
+      <FileName>FormsCreate\Meaning\CreatefinalResult.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowRBD1.FormsCreate.Meaning.CreateTransformant1" BaseTypeListCollapsed="true">
+    <Position X="8.25" Y="26.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAQIAAAgAQAAAAAAAAAAAAAAAAAIAAAIACAAAAAAA=</HashCode>
+      <FileName>FormsCreate\Meaning\CreateTransformant1.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.FormsCreate.Meaning.CreateTransformant2">
+    <Position X="5.25" Y="26.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAQIAAAgAQAAAAAAAAAAAAAAAAAIAAAIACAAAAAAA=</HashCode>
+      <FileName>FormsCreate\Meaning\CreateTransformant2.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowRBD1.FormsCreate.Meaning.CreateTransformant3" BaseTypeListCollapsed="true">
+    <Position X="8.5" Y="34.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAQIAAAgAQAAAAAAAAAAAAAAAAAIAAAIACAAAAAAA=</HashCode>
+      <FileName>FormsCreate\Meaning\CreateTransformant3.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Bottom" Position="1.3" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.FormsCreate.Meaning.intermediateResult.CreateIntermediateResult" BaseTypeListCollapsed="true">
+    <Position X="16.25" Y="34.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAQIAAAgAQAAAAAAAAAAAAAAAAAIAAAIACAAAAAAA=</HashCode>
+      <FileName>FormsCreate\Meaning\intermediateResult\CreateIntermediateResult.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.FormsCreate.Meaning.intermediateResult.CreateIntermediateResult1" BaseTypeListCollapsed="true">
+    <Position X="12.25" Y="37.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAQIAAAgAQAAAAAAAAAAAAAAAAAIAAAIACAAAAAAA=</HashCode>
+      <FileName>FormsCreate\Meaning\intermediateResult\CreateIntermediateResult1.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WindowRBD1.FormsCreate.Meaning.intermediateResult.CreateIntermediateResult2">
+    <Position X="15.25" Y="22.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAQIAAAgAQAAAAAAAAAAAAAAAAAIAAAIACAAAAAAA=</HashCode>
+      <FileName>FormsCreate\Meaning\intermediateResult\CreateIntermediateResult2.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowRBD1.FormsCreate.Meaning.intermediateResult.CreateIntermediateResult3" BaseTypeListCollapsed="true">
+    <Position X="16" Y="30.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQIAAAgAQAAAAAAAAAAAAAAAAAIAAAIACAAAAAAA=</HashCode>
+      <FileName>FormsCreate\Meaning\intermediateResult\CreateIntermediateResult3.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

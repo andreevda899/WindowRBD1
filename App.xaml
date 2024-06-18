@@ -1,0 +1,11 @@
+﻿<Application x:Class="WindowRBD1.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WindowRBD1"
+             StartupUri="Forms\FormReg.xaml"/>
+
+<!--StartupUri="FormsCreate\Works\CreateChief.xaml"/>-->
+<!--Equipment\CreateGenerative.xaml-->
+<!--"Forms\FormReg.xaml"-->
+<!--FormsEdit\Works\EditChief-->
+<!--StartupUri="FormsCreate\CreateEquipment.xaml"/>-->

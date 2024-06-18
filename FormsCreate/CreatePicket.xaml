@@ -1,0 +1,91 @@
+﻿<Window x:Class="WindowRBD1.FormsCreate.CreatePicket"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WindowRBD1"
+      mc:Ignorable="d" 
+         Height="949" Width="1920"
+        Title="Relational database v.1.0"
+  WindowState="Maximized" >
+
+    <Grid Margin="0,10,10,-6" >
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF02688A" Offset="0.062"/>
+                <GradientStop Color="#FF310946" Offset="0.862"/>
+                <GradientStop Color="#FF00334E" Offset="0.365"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Label Content="Наименование пикета" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="435,134,0,0" VerticalAlignment="Top" Width="318" Height="50"/>
+        <Label Content="Координата" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="435,211,0,0" VerticalAlignment="Top" Width="318" Height="50"/>
+        <Label Content="Вид измерения" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="435,291,0,0" VerticalAlignment="Top" Width="318" Height="50"/>
+        <Label Content="Номер отряда" Background="GhostWhite" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" HorizontalAlignment="Left" Margin="436,383,0,0" VerticalAlignment="Top" Width="318" Height="50"/>
+        <Label Content="Номер методики" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" HorizontalAlignment="Left" Margin="438,468,0,0" Background="GhostWhite" VerticalAlignment="Top" Width="317" Height="50"/>
+        <Label Content="Номер оборудования" HorizontalContentAlignment="Center" FontSize="18" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="436,548,0,0" Background="GhostWhite" VerticalAlignment="Top" Width="317" Height="50"/>
+
+        <TextBox x:Name="txtNamePicket" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" Margin="816,134,0,0"  VerticalAlignment="Top" Width="221" Height="50"/>
+        <ComboBox x:Name="txtNumberEquipment" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold"  Background="GhostWhite" Margin="816,548,0,0" VerticalAlignment="Top" Width="222" Height="50"/>
+        <TextBox x:Name="txtCoordinate" MaxLength="30" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" Margin="816,211,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="221" Height="50"/>
+        <ComboBox x:Name="txtNumberMethodology" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" Margin="818,468,0,0" VerticalAlignment="Top" Width="222" Height="50"/>
+        <ComboBox x:Name="txtNumberOrder" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" Margin="816,383,0,0" VerticalAlignment="Top" Width="221" Height="50"/>
+        <ComboBox x:Name="txtTypeMeasurement" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" Margin="816,291,0,0" VerticalAlignment="Top" Width="221" Height="50"/>
+
+        <Button x:Name="btCreate" Content="Создать" Background="GhostWhite" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" Margin="401,665,0,0" VerticalAlignment="Top" Height="93" Width="260" Click="btCreate_Click"/>
+        <Button x:Name="btClose" Content="Отменить" Background="GhostWhite" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" Margin="852,665,0,0" VerticalAlignment="Top" Height="93" Width="261" Click="btClose_Click"/>
+
+
+        <Label  Content="Добавления Пикета" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="568,36,0,0" VerticalAlignment="Top" Height="68" Width="425"/>
+
+        <Label x:Name="Time"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="13,33,0,0" VerticalAlignment="Top" Height="60" Width="auto"/>
+
+        <Button  HorizontalAlignment="Left" Background="GhostWhite" x:Name="btPoisk1" Click="btPoisk1_Click"  Margin="1061,467,0,0" VerticalAlignment="Top" Height="50">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-browse.png" RenderTransformOrigin="0.537,0.679" Height="39"/>
+            </StackPanel>
+        </Button>
+
+        <Button  HorizontalAlignment="Left" Background="GhostWhite" x:Name="btPoisk2" Click="btPoisk2_Click"  Margin="1062,383,0,0" VerticalAlignment="Top" Height="50">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-browse.png" RenderTransformOrigin="0.537,0.679" Height="39"/>
+            </StackPanel>
+        </Button>
+
+        <Button  HorizontalAlignment="Left" Background="GhostWhite" x:Name="btPoisk3" Click="btPoisk3_Click"  Margin="1061,548,0,0" VerticalAlignment="Top" Height="50">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-browse.png" RenderTransformOrigin="0.537,0.679" Height="39"/>
+            </StackPanel>
+        </Button>
+        <Button  HorizontalAlignment="Left" Background="GhostWhite" x:Name="btAdd1" Click="btAdd1_Click"  Margin="1121,467,0,0" VerticalAlignment="Top" Height="50">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-Add.png" RenderTransformOrigin="0.537,0.679" Height="39"/>
+            </StackPanel>
+        </Button>
+        <Button  HorizontalAlignment="Left" Background="GhostWhite" x:Name="btAdd2" Click="btAdd2_Click"  Margin="1122,383,0,0" VerticalAlignment="Top" Height="50">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-Add.png" RenderTransformOrigin="0.537,0.679" Height="39"/>
+            </StackPanel>
+        </Button>
+        <Button  HorizontalAlignment="Left" Background="GhostWhite" x:Name="btAdd3" Click="btAdd3_Click"  Margin="1121,547,0,0" VerticalAlignment="Top" Height="50">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-Add.png" RenderTransformOrigin="0.537,0.679" Height="39"/>
+            </StackPanel>
+        </Button>
+        <Button  HorizontalAlignment="Left" Background="GhostWhite" Click="btRefresh_Click"  Margin="1183,383,0,0" VerticalAlignment="Top" Height="50">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-refresh.png" RenderTransformOrigin="0.537,0.679" Height="39"/>
+            </StackPanel>
+        </Button>
+        <Button  HorizontalAlignment="Left" Background="GhostWhite" Click="btRefresh1_Click"  Margin="1183,468,0,0" VerticalAlignment="Top" Height="50">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-refresh.png" RenderTransformOrigin="0.537,0.679" Height="39"/>
+            </StackPanel>
+        </Button>
+        <Button  HorizontalAlignment="Left" Background="GhostWhite" Click="btRefresh2_Click"  Margin="1183,548,0,0" VerticalAlignment="Top" Height="50">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-refresh.png" RenderTransformOrigin="0.537,0.679" Height="39"/>
+            </StackPanel>
+        </Button>
+    </Grid>
+</Window>

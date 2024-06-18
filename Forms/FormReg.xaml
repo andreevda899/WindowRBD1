@@ -1,0 +1,44 @@
+﻿<Window x:Class="WindowRBD1.Forms.FormReg"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WindowRBD1"
+      mc:Ignorable="d" Title="Relational database v.1.0"
+      WindowState="Maximized"  Height="949" Width="1920" >
+
+    <Window.Resources>
+        <Image x:Key="Image.Plus" Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\iconsDisplayPassword.png"/>
+        <Image x:Key="Image.RedCross" Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\iconsClosePassword.png"/>
+    </Window.Resources>
+    
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF02688A" Offset="0.062"/>
+                <GradientStop Color="#FF310946" Offset="0.862"/>
+                <GradientStop Color="#FF00334E" Offset="0.365"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Label x:Name="Time"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="13,33,0,0" VerticalAlignment="Top" Height="60" Width="auto"/>
+
+        <TextBox x:Name="txtLog" MaxLength = "30" HorizontalContentAlignment="Center" FontWeight="Bold" VerticalContentAlignment="Center" FontSize="30" Background="GhostWhite" HorizontalAlignment="Left" Margin="865,248,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="475" Height="94"/>
+        <TextBox Name="pwdTextBox" HorizontalAlignment="Left" MaxLength="30" Grid.Column="2" Margin="865,437,0,0" HorizontalContentAlignment="Center" FontWeight="Bold" VerticalContentAlignment="Center" FontSize="30" VerticalAlignment="Top" Width="475" Height="94" Visibility="Hidden"/>
+        <PasswordBox x:Name="pwdPasswordBox" Grid.Column="2" MaxLength = "30" HorizontalContentAlignment="Center" FontWeight="Bold" VerticalContentAlignment="Center" FontSize="30" Background="GhostWhite" HorizontalAlignment="Left" Margin="865,437,0,0" VerticalAlignment="Top" Width="475" Height="94"/>
+        <Button Content="Войти" FontWeight="Bold" Background="GhostWhite" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" HorizontalAlignment="Left" Margin="316,656,0,0" VerticalAlignment="Top" Height="120" Width="400" Click="BtnEntry_Click"/>
+        <Label Content="Логин" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" Background="GhostWhite" HorizontalAlignment="Left" Margin="240,248,0,0" VerticalAlignment="Top" Height="94" Width="466"/>
+        <Label Content="Пароль" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" Background="GhostWhite" HorizontalAlignment="Left" Margin="240,437,0,0" VerticalAlignment="Top" Height="94" Width="466"/>
+        <Button Content="Восстановление пароля" FontWeight="Bold" Background="GhostWhite"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" HorizontalAlignment="Left" Margin="807,656,0,0" VerticalAlignment="Top" Height="120" Width="400" Click="BtnPassword_Click"/>
+        <Label Content="Вход в систему" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" Background="GhostWhite" HorizontalAlignment="Left" Margin="574,64,0,0" VerticalAlignment="Top" Height="94" Width="466"/>
+
+         <Button HorizontalAlignment="Left" x:Name="Display" Margin="1375,459,0,0" VerticalAlignment="Top" Height="50" Width="50">
+            <StackPanel Orientation="Horizontal">
+                <Image  x:Name="res" RenderTransformOrigin="0.5,0.5" Width="30" Height="30" />
+
+            </StackPanel>
+        </Button>
+
+        
+    </Grid>
+</Window>

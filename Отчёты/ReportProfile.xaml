@@ -1,0 +1,52 @@
+﻿<Window x:Class="WindowRBD1.Отчёты.ReportProfile"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindowRBD1.Отчёты"
+        mc:Ignorable="d"
+        Title="Relational database v.1.0"  Height="949" Width="1920" WindowState="Maximized">
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF02688A" Offset="0.062"/>
+                <GradientStop Color="#FF310946" Offset="0.862"/>
+                <GradientStop Color="#FF00334E" Offset="0.365"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Image HorizontalAlignment="Left" Height="124" Margin="10,10,0,0" VerticalAlignment="Top" Width="126" Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\IconProgram.png"/>
+
+        <Label Content="Наименование профиля" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="126,257,0,0" VerticalAlignment="Top" Width="284" Height="50"/>
+        <Label Content="Координаты начала" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="126,450,0,0" VerticalAlignment="Top" Width="284" Height="50"/>
+        <Label Content="Координаты окончания" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="836,162,0,0" VerticalAlignment="Top" Width="253" Height="50"/>
+        <Label Content="Длина" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="836,260,0,0" VerticalAlignment="Top" Width="253" Height="50" />
+        <Label Content="Дата и время начала работ" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="836,352,0,0" VerticalAlignment="Top" Width="253" Height="50"/>
+        <Label Content="Дата и время окончания работ" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="836,450,0,0" VerticalAlignment="Top" Width="253" Height="50"/>
+
+        <Label x:Name="txtNameProfile" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" Margin="489,257,0,0"  VerticalAlignment="Top" Width="209" Height="50" />
+        <Label x:Name="txtCoordinatesBeginning" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" Margin="489,450,0,0" VerticalAlignment="Top" Width="209" Height="50"/>
+        <Label x:Name="txtCoordinatesEnd" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" Margin="1163,162,0,0" VerticalAlignment="Top" Width="230" Height="50"/>
+        <Label x:Name="txtLength" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" Margin="1163,260,0,0" VerticalAlignment="Top" Width="230" Height="50"/>
+        <Label x:Name="lbCoordinatesBeginning"  HorizontalAlignment="Left" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" Margin="466,517,0,0" VerticalAlignment="Top" Height="27" Width="auto"/>
+        <Label x:Name="lbCoordinatesEnd"  HorizontalAlignment="Left" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" Margin="1129,230,0,0" VerticalAlignment="Top" Height="27" Width="auto"/>
+
+        <Label Content="Координаты изломов" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="126,536,0,0" VerticalAlignment="Top" Width="284" Height="50"/>
+        <Label x:Name="txtCoordinatesFracture" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" Margin="489,536,0,0"  VerticalAlignment="Top" Width="209" Height="50"/>
+        <Label x:Name="lbCoordinatesFracture"  HorizontalAlignment="Left" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" Margin="461,597,0,0" VerticalAlignment="Top" Height="27" Width="auto"/>
+        <Label Content="Номер пикета" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="126,355,0,0" VerticalAlignment="Top" Width="284" Height="50"/>
+        <Label x:Name="txtNumberPicket" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" Margin="489,355,0,0"  VerticalAlignment="Top" Width="209" Height="50"/>
+        <Label x:Name="dateBen"  HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" Margin="1163,355,0,0"  VerticalAlignment="Top" Width="230" Height="50"/>
+        <Label x:Name="dateEnd" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" Margin="1163,450,0,0" VerticalAlignment="Top" Width="230" Height="50"/>
+        <Label Content="Номер профиля" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="126,162,0,0" VerticalAlignment="Top" Width="284" Height="50"/>
+        <Label x:Name="txtNumber" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="GhostWhite" Margin="489,162,0,0"  VerticalAlignment="Top" Width="209" Height="50"/>
+
+        <Label  Content="Отчёт о профиле" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="23" FontWeight="Bold" Background="GhostWhite" HorizontalAlignment="Left" Margin="570,40,0,0" VerticalAlignment="Top" Height="69" Width="425"/>
+
+        <Button HorizontalAlignment="Left" Margin="250,40,0,0" VerticalAlignment="Top" Height="69" Width="154" Click="Button_Click">
+            <Image  x:Name="res" Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icons-Print.png" Width="154" />
+        </Button>
+        <Image HorizontalAlignment="Left" Height="100" Margin="72,672,0,0" Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\Подпись.PNG" VerticalAlignment="Top" Width="347"/>
+
+    </Grid>
+</Window>

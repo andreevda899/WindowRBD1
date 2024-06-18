@@ -1,0 +1,30 @@
+﻿<Window x:Class="WindowRBD1.Forms.NumberPicket"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WindowRBD1"
+      mc:Ignorable="d" 
+      WindowStartupLocation="CenterScreen"
+      Height="450" Width="570"
+      Title="Relational database v.1.0">
+
+    <Grid Margin="0,10,0,-6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="69*"/>
+            <ColumnDefinition Width="7*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF02688A" Offset="0.062"/>
+                <GradientStop Color="#FF310946" Offset="0.862"/>
+                <GradientStop Color="#FF00334E" Offset="0.365"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <DataGrid HorizontalAlignment="Center" x:Name="dataGridView1" FontSize="18" FontWeight="Bold" Height="267" VerticalAlignment="Top" Width="494" d:ItemsSource="{d:SampleData ItemCount=2}" Margin="0,58,0,0"/>
+
+        <Button Content="Назад" HorizontalContentAlignment="Center" FontSize="30" FontWeight="Bold"  VerticalContentAlignment="Center" HorizontalAlignment="Left" Background="GhostWhite" Margin="343,352,0,0" VerticalAlignment="Top" Width="140" Height="50" Click="Button_Click"/>
+
+    </Grid>
+</Window>
