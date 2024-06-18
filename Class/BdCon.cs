@@ -8,9 +8,6 @@ namespace WindowRBD1.Class
 {
     internal class BdCon 
     {
-        //public static string Con = "Data Source=ANDREEVDAA\\SQLEXPRESS;Initial Catalog=Diplom;Integrated Security=True"; //строка подключение
-
-        public static string Con = "Data Source=ANDREEVDAA\\SQLEXPRESS;Initial Catalog=Control;Integrated Security=True";
-
+        public static string Con = "Data Source=andreevdaa\\sqlexpress;Initial Catalog=GeoSystem;Integrated Security=True";
     }
 }

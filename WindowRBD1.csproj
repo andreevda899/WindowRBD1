@@ -172,7 +172,9 @@
     <Reference Include="Syncfusion.Shared.WPF, Version=25.1462.41.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <HintPath>packages\Syncfusion.Shared.WPF.25.1.41\lib\net462\Syncfusion.Shared.WPF.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.AppContext, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.AppContext.4.3.0\lib\net463\System.AppContext.dll</HintPath>
       <Private>True</Private>
@@ -1401,15 +1403,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Image\icons-form.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="БД\Control.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="БД\Control_log.ldf">
-      <DependentUpon>Control.mdf</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
