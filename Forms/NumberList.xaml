@@ -27,7 +27,7 @@
                 <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-refresh.png"/>
             </StackPanel>
         </Button>
-        <Button x:Name="btReport" Width="60" Height="60" Click="btReport_Click" Margin="0,352,260,18">
+        <Button x:Name="btReport" Width="60" Height="60" Click="btReport_Click" Margin="10">
             <StackPanel Orientation="Horizontal">
                 <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icons-Report.png"/>
             </StackPanel>
