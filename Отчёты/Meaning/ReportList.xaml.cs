@@ -29,7 +29,6 @@ namespace WindowRBD1.Отчёты
             InitializeComponent();
             txtList1();
         }
-        string Number;
 
         private void txtList1() //При изменении значения происходит смена данных у всех элементов
         {
