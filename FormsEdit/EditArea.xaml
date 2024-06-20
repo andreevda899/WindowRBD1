@@ -98,7 +98,6 @@
                 </Style>
             </DatePicker.Resources>
         </DatePicker>
-        <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-refresh.png" RenderTransformOrigin="0.537,0.679" Margin="0,0,1871,832"/>
         <Button  HorizontalAlignment="Left" Height="50" Background="GhostWhite" Click="btRefresh1_Click" Margin="700,381,0,0" VerticalAlignment="Top">
             <StackPanel Orientation="Horizontal">
                 <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-refresh.png" RenderTransformOrigin="0.537,0.679" Height="39"/>
