@@ -27,11 +27,38 @@ namespace WindowRBD1.Отчёты
         public ReportList()
         {
             InitializeComponent();
-            txtNameContract();
+            txtList1();
         }
         string Number;
 
-        private void txtNameContract() //При изменении значения происходит смена данных у всех элементов
+        private void txtList1() //При изменении значения происходит смена данных у всех элементов
+        {
+            SqlConnection connection = new SqlConnection(BdCon.Con);
+            string sql = "SELECT [Номер списка углов периметра] FROM Proekt.[Список координат углов периметра]";
+            connection.Open();
+            SqlCommand command = new SqlCommand(sql, connection);
+            SqlDataReader reader = command.ExecuteReader();
+            txtList.Items.Clear();
+            while (reader.Read())
+            {
+                txtList.Items.Add(reader[0].ToString());
+            }
+            reader.Close();
+            command.Dispose();
+            connection.Close();
+        }
+
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            PrintDialog dialog = new PrintDialog();
+            if (dialog.ShowDialog() == true)
+            {
+                dialog.PrintVisual(this, "Визитная карта");
+            }
+        }
+
+        private void txtList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             string str = "Select * from Proekt.[Список координат углов периметра] where [Номер списка углов периметра] = " + txtList.SelectedItem;
 
@@ -54,16 +81,6 @@ namespace WindowRBD1.Отчёты
 
                 da.Dispose();
                 conn.Close();
-            }
-        }
-
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            PrintDialog dialog = new PrintDialog();
-            if (dialog.ShowDialog() == true)
-            {
-                dialog.PrintVisual(this, "Визитная карта");
             }
         }
     }
