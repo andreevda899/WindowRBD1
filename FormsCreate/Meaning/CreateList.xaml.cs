@@ -45,6 +45,8 @@ namespace WindowRBD1.FormsCreate.Meaning
                 comm.ExecuteNonQuery();
                 MessageBox.Show("Запись добавлена");
             }
+
+
         }
     }
 }

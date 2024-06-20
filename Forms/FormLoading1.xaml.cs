@@ -63,7 +63,7 @@ namespace WindowRBD1.Forms
             }
         }
 
-        private async void lineProgress() // Запуск ProgressBar
+        private async void lineProgress() // Запуск ProgressBar и открытие формы
         {
             for (int i = 0; i <= 100; i++)
             {

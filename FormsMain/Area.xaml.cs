@@ -363,7 +363,7 @@ namespace WindowRBD1.FormsMain
             Workbook workbook = excel.Workbooks.Add("C:\\Users\\Пользователь\\Desktop\\WindowRBD1\\База Данных.xlsx");
             Worksheet sheet1 = (Worksheet)workbook.Sheets[uri];
 
-	    sheet1.Columns.ColumnWidth = 30;
+	        sheet1.Columns.ColumnWidth = 30;
 
             for (int j = 0; j < dataGridView1.Columns.Count; j++) 
             {

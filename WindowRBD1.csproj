@@ -528,6 +528,9 @@
     <Compile Include="Отчёты\Meaning\intermediateResult\ReportIntermediateResult.xaml.cs">
       <DependentUpon>ReportIntermediateResult.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Отчёты\Meaning\ReportList.xaml.cs">
+      <DependentUpon>ReportList.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Отчёты\Meaning\ReportTransformant2.xaml.cs">
       <DependentUpon>ReportTransformant2.xaml</DependentUpon>
     </Compile>
@@ -1214,6 +1217,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Отчёты\Meaning\intermediateResult\ReportIntermediateResult.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Отчёты\Meaning\ReportList.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

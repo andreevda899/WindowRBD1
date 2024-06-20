@@ -20,7 +20,29 @@
 
         <DataGrid HorizontalAlignment="Left" x:Name="dataGridView1" FontSize="18" FontWeight="Bold" Height="267" VerticalAlignment="Top" Width="494" d:ItemsSource="{d:SampleData ItemCount=2}" Margin="44,58,0,0"/>
 
-        <Button Content="Назад" HorizontalContentAlignment="Center" FontSize="30" FontWeight="Bold"  VerticalContentAlignment="Center" HorizontalAlignment="Left" Background="GhostWhite" Margin="398,352,0,0" VerticalAlignment="Top" Width="140" Height="50" Click="Button_Click"/>
+        <Button Content="Назад" HorizontalContentAlignment="Center" FontSize="30" FontWeight="Bold"  VerticalContentAlignment="Center" HorizontalAlignment="Left" Background="GhostWhite" Margin="398,352,0,0" VerticalAlignment="Top" Width="140" Height="60" Click="Button_Click"/>
+
+        <Button x:Name="btRefresh" Width="60" Height="60" Click="btRefresh_Click" Margin="0,352,420,18" >
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icon-refresh.png"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="btReport" Width="60" Height="60" Click="btReport_Click" Margin="0,352,260,18">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icons-Report.png"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="btImport" Width="60" Height="60" Margin="280,352,220,18" Click="ExportToTxt_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icons8-Export-Txt.png"/>
+            </StackPanel>
+        </Button>
+
+        <Button x:Name="btExport" Width="60" Height="60" Margin="120,352,220,18" Click="btExport_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="C:\Users\Пользователь\Desktop\WindowRBD1\Image\icons8-Export-XLS.png"/>
+            </StackPanel>
+        </Button>
 
     </Grid>
 </Window>
