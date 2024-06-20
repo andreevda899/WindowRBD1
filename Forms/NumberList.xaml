@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:WindowRBD1.Forms"
       mc:Ignorable="d" 
       WindowStartupLocation="CenterScreen"
-      Height="450" Width="570"
+      Height="464" Width="570"
       Title="Relational database v.1.0">
 
     <Grid Margin="0,10,10,-6">
